@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import './header.css';
 //import './backg.css';
 import Header from './components/Header';
 import { BrowserRouter as Router } from "react-router-dom";
