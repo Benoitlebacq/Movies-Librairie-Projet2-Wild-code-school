@@ -1,52 +1,63 @@
-import React from "react";
-import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from 'reactstrap';
+import React, { Fragment } from "react";
+import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink, InputGroup, InputGroupText, InputGroupAddon, Input } from 'reactstrap';
 class Header extends React.Component {
-    constructor(props) {
-        super(props);
-    
-        this.toggle = this.toggle.bind(this);
-        this.state = {
-          dropdownOpen: false
-        };
-      }
-    
-      toggle() {
-        this.setState({
-          dropdownOpen: !this.state.dropdownOpen
-        });
-      }
-    
-      render() {
-        return (
-          <div>
-            <Nav tabs>
-              <NavItem>
-                <NavLink href="#" active><h1>LET</h1></NavLink>
-              </NavItem>
-              <Dropdown nav isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-                <DropdownToggle nav caret>
-                  Dropdown
+  constructor(props) {
+    super(props);
+
+    this.toggle = this.toggle.bind(this);
+    this.state = {
+      dropdownOpen: false
+    };
+  }
+
+  toggle() {
+    this.setState({
+      dropdownOpen: !this.state.dropdownOpen
+    });
+  }
+
+  render() {
+    return (
+      <Fragment>
+        <div className="menu">
+          <nav className="navbar navbar-expand-xl navbar-light">
+            <a href="#"><img id="logo" src="image/LNElogo.png" alt="logo" /></a>
+           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
+          </button> 
+            <div className="collapse navbar-collapse" id="navbarNav">
+              <ul className="navbar-nav mx-auto">
+                <li className="nav-item"><a className="nav-link" href="#numeric">Science-Fictions</a></li>
+                <li className="nav-item"><a className="nav-link" href="#euratechnologies">Westerns</a></li>
+                <li className="nav-item"><a className="nav-link" href="#poles">Drames</a></li>
+                <li className="nav-item"><a className="nav-link" href="#dsc">Comédies</a></li>
+                <li className="nav-item"><a className="nav-link" href="#collaborators">Dessins-animés</a></li>
+                <li className="nav-item">
+                  <Dropdown nav isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+                    <DropdownToggle nav caret>
+                      Listes
                 </DropdownToggle>
-                <DropdownMenu>
-                  <DropdownItem header>Header</DropdownItem>
-                  <DropdownItem >Action</DropdownItem>
-                  <DropdownItem>Another Action</DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>Another Action</DropdownItem>
-                </DropdownMenu>
-              </Dropdown>
-              <NavItem>
-                <NavLink href="#">Link</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="#">Another Link</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink disabled href="#">Disabled Link</NavLink>
-              </NavItem>
-            </Nav>
+                    <DropdownMenu>
+                      <DropdownItem>Mes favoris</DropdownItem>
+                      <DropdownItem >A regarder plus tard</DropdownItem>
+                      <DropdownItem>Autres liste</DropdownItem>
+                      <DropdownItem divider />
+                      <DropdownItem>+ Nouvelle liste</DropdownItem>
+                    </DropdownMenu>
+                  </Dropdown>
+                 </li> 
+              </ul>
+            </div>
+          </nav>
           </div>
-        );
-      }
-    }
+        <div className="recherche">
+          <InputGroup>
+            <InputGroupAddon addonType="prepend">@</InputGroupAddon>
+            <Input placeholder="Rechercher" />
+          </InputGroup>
+        </div>
+      </Fragment>
+    );
+  }
+}
 export default Header;
