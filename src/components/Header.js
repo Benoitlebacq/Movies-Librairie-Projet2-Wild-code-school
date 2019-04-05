@@ -21,7 +21,7 @@ class Header extends React.Component {
       <Fragment>
         <div className="menu">
           <nav className="navbar navbar-expand-xl navbar-light">
-            <a href="#"><img id="logo" src="image/LNElogo.png" alt="logo" /></a>
+            <img id="logo" src="/img/logo.png" alt="logo" />
            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
           </button> 
