@@ -1,25 +1,23 @@
 import React from "react";
 import Fichecontain from "./Fichecontain";
-import data from "./Data"
+
 
 class Fiche extends React.Component {
     render() {
+      
       return (  
         <div>          
-          {data.map((film, idx) => {
-              if ( idx === 1){
-                return (
-                <Fichecontain
-                    name={film.filmName}
-                    key={idx}
-                    cle={idx}
-                    image = {film.image}
-                 /> 
-                        );
-                };
-            })}
+         <p>
+         
+         {this.props.match.params.ficheNumber}
+
+         </p>
         </div>        
       );
     }
   }
+
+  //on veut recuperer dans la fiche :  "https://api.themoviedb.org/3/movie/ + id de la fiche qui a été cliquée + ?api_key=a8a3380a564299f359c18e52aaa5bc79"
+  // if video === false  on fait une recherche du trailer  sur YT
+
   export default Fiche;
