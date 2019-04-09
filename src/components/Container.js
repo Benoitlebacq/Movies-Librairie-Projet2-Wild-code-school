@@ -10,7 +10,7 @@ function Container({ location }) {
             <section className="route-section">
               <Switch location={location}>
                 <Route exact path="/" component={Galerie} />
-                <Route path="/fiche" component={Fiche} />
+                <Route path="/fiche/:ficheNumber(\d+)" component={Fiche} />
               </Switch>
             </section>
 
