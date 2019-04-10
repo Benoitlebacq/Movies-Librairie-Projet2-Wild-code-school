@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Button, CardImg} from 'reactstrap';
+import { Card, CardImg} from 'reactstrap';
 import { Link } from "react-router-dom";  
 class Movie extends React.Component {
   render() {
