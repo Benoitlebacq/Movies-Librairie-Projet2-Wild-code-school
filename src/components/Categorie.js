@@ -9,7 +9,9 @@ class Categorie extends Component {
       this.state = {
           movies:[]      
       };
-     this.getMovie();
+    }
+    componentDidMount() {
+      this.getMovie();
     }
     getMovie() {    
       fetch(this.props.url)
@@ -38,5 +40,5 @@ class Categorie extends Component {
       </div>
       )
     }
-}
+};
 export default Categorie;
