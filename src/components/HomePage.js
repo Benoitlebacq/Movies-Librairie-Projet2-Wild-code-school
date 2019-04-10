@@ -2,7 +2,7 @@ import React from "react";
 import Categorie from "./Categorie";
 import Data from "./Data";
 
-class Galerie extends React.Component {
+class HomePage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -27,4 +27,4 @@ class Galerie extends React.Component {
     );
   }
 }
-export default Galerie;
+export default HomePage;
