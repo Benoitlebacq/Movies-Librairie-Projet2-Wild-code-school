@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Movie from "./Movie";
 import {  CardDeck } from 'reactstrap';
+import '../App.css';
 
 
 class Categorie extends React.Component {
@@ -28,7 +29,7 @@ class Categorie extends React.Component {
       return (
       <div>
       <h2>{this.props.type}</h2>
-      <CardDeck>   
+      <CardDeck className = "containing">   
           {this.state.movies.map((film, idx) => {
           return (
             <Movie

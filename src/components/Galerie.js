@@ -1,8 +1,4 @@
 import React from "react";
-import Movie from "./Movie";
-import { Card, Button, CardImg, CardTitle, CardText, CardDeck,
-  CardSubtitle, CardBody } from 'reactstrap';
-import data from "./Data";
 import Categorie from "./Categorie"
 
 
@@ -61,8 +57,6 @@ class Galerie extends React.Component {
     );
   }
 }
-
-//"https://api.themoviedb.org/3/movie/287947?api_key=a8a3380a564299f359c18e52aaa5bc79
 
 
 export default Galerie;
