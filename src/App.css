@@ -2,9 +2,14 @@
   text-align: center;
 }
 .containing {
-  display: inline-block;
+  display: flex;
+  overflow: scroll;
 }
 .movieTitle {
   color : red;
 }
+.img-card{
+  height:30vh;
+}
+
 
