@@ -35,3 +35,10 @@ body {
   }
 }
 
+.containing {
+  display: inline-block;
+}
+.movieTitle {
+  color : red;
+}
+
