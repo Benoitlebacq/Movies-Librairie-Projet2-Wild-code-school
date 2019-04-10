@@ -1,7 +1,9 @@
 .App {
   text-align: center;
 }
-
+body {
+  background: black;
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -32,3 +34,11 @@
     transform: rotate(360deg);
   }
 }
+
+.containing {
+  display: inline-block;
+}
+.movieTitle {
+  color : red;
+}
+

@@ -1,8 +1,4 @@
 import React from "react";
-import Movie from "./Movie";
-import { Card, Button, CardImg, CardTitle, CardText, CardDeck,
-  CardSubtitle, CardBody } from 'reactstrap';
-import data from "./Data";
 import Categorie from "./Categorie"
 
 
@@ -61,4 +57,6 @@ class Galerie extends React.Component {
     );
   }
 }
+
+
 export default Galerie;
