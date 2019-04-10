@@ -2,22 +2,16 @@ import React from "react";
 import Categorie from "./Categorie";
 import Data from "./Data";
 
-
-
 class Galerie extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       Data
     };
-    
-  }
-  
+  }  
   render() {
     return (
-
       <div>
-
         {this.state.Data.map((item)=> {
           return(
           <Categorie
@@ -28,14 +22,9 @@ class Galerie extends React.Component {
           >
           </Categorie>
           )
-
-        })} 
-        
-      </div>
-  
+        })}         
+      </div>  
     );
   }
 }
-
-
 export default Galerie;

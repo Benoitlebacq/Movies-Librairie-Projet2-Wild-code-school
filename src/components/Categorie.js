@@ -3,24 +3,19 @@ import Movie from "./Movie";
 import {  CardDeck } from 'reactstrap';
 import '../App.css';
 
-
-class Categorie extends React.Component {
+class Categorie extends Component {
     constructor(props) {
       super(props);
       this.state = {
-          movies:[]
-      
+          movies:[]      
       };
      this.getMovie();
     }
     getMovie() {    
       fetch(this.props.url)
         .then(response  =>  response.json())
-        .then(data  => { 
-          console.log(data.results)    
-         
-          this.setState({
-            
+        .then(data  => {           
+           this.setState({            
             movies : data.results
           });
       });    
@@ -35,34 +30,13 @@ class Categorie extends React.Component {
             <Movie
               key={idx}
               cle={film.id}
-              image = {"https://image.tmdb.org/t/p/w500" + film.poster_path}
-              
+              image = {"https://image.tmdb.org/t/p/w500" + film.poster_path}              
             />
-          );
-        
+          );        
         })}      
-      </CardDeck>
-        
-
+      </CardDeck>   
       </div>
       )
-
     }
 }
-
 export default Categorie;
-
-/*<CardDeck>
-        <div className ="row">       
-          {this.state.movies.map((film, idx) => {
-          return (
-            <Movie
-              key={idx}
-              cle={idx}
-              image = {"https://image.tmdb.org/t/p/w500" + film.poster_path}
-              title={film.title}
-            />
-          );
-        })}
-        </div>        
-      </CardDeck>*/
