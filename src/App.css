@@ -6,6 +6,7 @@
 .containing {
   display: flex;
   overflow: scroll;
+  height: 35vh;
 }
 .movieTitle {
   color : red;
@@ -15,6 +16,9 @@
 }
 .categoriesName {
   font-family: 'Anton', sans-serif;
+}
+.img-card:hover {
+  height: 35vh;;
 }
 
 
