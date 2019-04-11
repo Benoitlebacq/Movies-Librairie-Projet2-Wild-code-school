@@ -7,7 +7,7 @@ class Movie extends React.Component {
       <div className= "movie-card">
       <span>{this.props.title}</span>
         
-        <div className="card">
+        <div className="card border-0 m-1">
        
           <Link  to={`/fiche/${this.props.cle}`}><img src ={this.props.image} alt="" className="img-card"/></Link>
         </div>
