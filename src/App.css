@@ -7,7 +7,8 @@
 }
 .containing {
   display: flex;
-  overflow: scroll;
+  overflow-x: scroll;
+  overflow-y: hidden;
   height: 35vh;
 }
 .movieTitle {
@@ -16,6 +17,7 @@
 .img-card{
   height:30vh;
 }
+
 .categoriesName {
   font-family: 'Anton', sans-serif;
 }
