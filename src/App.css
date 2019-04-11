@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  background-color: black;
+  color : white;
 }
 .containing {
   display: flex;
@@ -10,6 +12,9 @@
 }
 .img-card{
   height:30vh;
+}
+.categoriesName {
+  font-family: 'Anton', sans-serif;
 }
 
 
