@@ -1,17 +1,27 @@
 .App {
-  text-align: center;
+ homepage-gallery
+  text-align: left;
   background-color: black;
-  color : white
+  color : white;
+
+ 
 }
 .containing {
   display: flex;
   overflow: scroll;
+  height: 35vh;
 }
 .movieTitle {
   color : red;
 }
 .img-card{
   height:30vh;
+}
+.categoriesName {
+  font-family: 'Anton', sans-serif;
+}
+.img-card:hover {
+  height: 35vh;;
 }
 
 
