@@ -16,7 +16,7 @@ class Fiche extends React.Component {
   getFiche() { 
     axios.get("https://api.themoviedb.org/3/movie/" + this.props.match.params.ficheNumber + "?api_key=a8a3380a564299f359c18e52aaa5bc79" )
       .then(response  => {   
-        console.log(response.data) 
+         
         this.setState({        
           fiche : response.data
         }); 
