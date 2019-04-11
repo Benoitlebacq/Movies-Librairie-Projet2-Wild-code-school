@@ -1,12 +1,12 @@
 const Data =
 [
-{type: "popular",          
+{type: "Popular",          
   url : "https://api.themoviedb.org/3/movie/popular?api_key=a8a3380a564299f359c18e52aaa5bc79"        
 },
-{type: "top rated",          
+{type: "Top rated",          
   url : "https://api.themoviedb.org/3/movie/top_rated?api_key=a8a3380a564299f359c18e52aaa5bc79"       
 },
-{type: "upcoming",          
+{type: "Upcoming",          
   url : "https://api.themoviedb.org/3/movie/upcoming?api_key=a8a3380a564299f359c18e52aaa5bc79"     
 },
 {type: "Western",          
