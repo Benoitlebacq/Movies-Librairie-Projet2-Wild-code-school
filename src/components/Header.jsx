@@ -1,5 +1,7 @@
 import React, { Fragment } from "react";
 import { Dropdown, DropdownItem, DropdownToggle, DropdownMenu, InputGroup, InputGroupAddon, Input } from 'reactstrap';
+
+
 class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -16,10 +18,14 @@ class Header extends React.Component {
   }
   render() {
     return (
+    
+
       <Fragment>
         <div className="menu">
           <nav className="navbar navbar-expand-xl navbar-light">
-            <img id="logo" src="/img/logo.png" alt="logo" />
+            <img className="LOGO" src="https://image.noelshack.com/fichiers/2019/15/5/1555066583-screenshot-from-2019-04-12-11-21-07-convertimage.png
+" />
+           
            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
           </button> 
