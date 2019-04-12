@@ -21,7 +21,7 @@ class Fiche extends React.Component {
           fiche : response.data
         }); 
 
-        const apiKey = "AIzaSyAYQjF7_hRZGUMoUwlcUezlq33cGFz5SO0"; 
+        const apiKey = "AIzaSyBNHhT2wVa0lrIZsmMlTlTgIhY1VjrpZ7c"; 
         const query = `${response.data.original_title} trailer`;
     
         axios
