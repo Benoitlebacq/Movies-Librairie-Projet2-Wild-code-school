@@ -21,7 +21,8 @@ class Casting extends React.Component{
          this.state.cast.filter((member,i)=>{
              return i<5;
          }).map((casting) => {
-              return <li>{casting.name}</li>
+              return <img className="movie-profil" src={"https://image.tmdb.org/t/p/w500" + casting.profile_path} alt={casting.name}  title={casting.name} />
+              
             }
             )
         )}

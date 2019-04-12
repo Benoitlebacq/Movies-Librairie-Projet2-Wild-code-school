@@ -21,7 +21,7 @@ class CastTech extends React.Component{
          this.state.crew.filter((member,i)=>{
              return i<5;
          }).map((casting) => {
-              return <li>{casting.job}</li>
+              return <li>{casting.job} : {casting.name}</li>
             }
             )
         )}
