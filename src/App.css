@@ -26,3 +26,34 @@
 }
 
 
+/* Fiche film */
+.movie-description {
+  width: 90%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.movie-synopsis {
+  text-align: left;
+}
+.movie-title{
+  text-align: left;
+}
+.movie-pic{
+  display: inline;
+}
+.movie-poster {
+  float: left;
+  height: 60vh;
+}
+.movie-profil{
+  width: 10%;
+}
+ul {
+  list-style: none;
+}
+
+
+.LOGO {
+  width: 8em
+}
+
