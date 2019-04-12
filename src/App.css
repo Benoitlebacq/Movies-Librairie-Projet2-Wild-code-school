@@ -25,6 +25,7 @@
   height: 35vh;;
 }
 
+
 /* Fiche film */
 .movie-description {
   width: 90%;
@@ -49,5 +50,10 @@
 }
 ul {
   list-style: none;
+}
+
+
+.LOGO {
+  width: 8em
 }
 

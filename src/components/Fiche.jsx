@@ -26,7 +26,7 @@ class Fiche extends React.Component {
           genres: response.data.genres
         }); 
 
-        const apiKey = "AIzaSyAYQjF7_hRZGUMoUwlcUezlq33cGFz5SO0"; 
+        const apiKey = "AIzaSyBNHhT2wVa0lrIZsmMlTlTgIhY1VjrpZ7c"; 
         const query = `${response.data.original_title} trailer`;
     
         axios
@@ -55,8 +55,10 @@ class Fiche extends React.Component {
                 <h1 className="movie-title">{this.state.fiche.original_title}</h1> 
                 <div className="movie-pic">
                     <img className="movie-poster" src={"https://image.tmdb.org/t/p/w500" + this.state.fiche.poster_path} alt={this.state.fiche.original_title} />
+
                     <div className="youtube"><Youtube className="heigh-youtube" videoId={this.state.videoId} /></div>
                     <p className="movie-date">Release date : {this.state.fiche.release_date}</p>
+
                 </div>
               <div className="movie-infos"> 
               <div className="movie-synopsis"> 
