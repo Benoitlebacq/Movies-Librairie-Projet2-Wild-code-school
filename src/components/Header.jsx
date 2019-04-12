@@ -1,5 +1,5 @@
 import React, { Fragment } from "react";
-import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink, InputGroup, InputGroupText, InputGroupAddon, Input } from 'reactstrap';
+import { Dropdown, DropdownItem, DropdownToggle, DropdownMenu, InputGroup, InputGroupAddon, Input } from 'reactstrap';
 class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -9,13 +9,11 @@ class Header extends React.Component {
       dropdownOpen: false
     };
   }
-
   toggle() {
     this.setState({
       dropdownOpen: !this.state.dropdownOpen
     });
   }
-
   render() {
     return (
       <Fragment>

@@ -1,25 +1,21 @@
 import React, { Component } from 'react';
 import './App.css';
 import './header.css';
-//import './backg.css';
 import Header from './components/Header';
 import { BrowserRouter as Router } from "react-router-dom";
-import Container from "./components/Container"
+import Routing from "./components/Routing";
+
+
 class App extends Component {
- 
-
-  
-
   render() {
     return (
       <Router>
         <div className="App">
           <Header/>
-          <Container/>
+          <Routing/>
         </div>
       </Router>
     );
   }
 }
-
 export default App;
