@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Dropdown, DropdownItem, DropdownToggle, DropdownMenu, InputGroup, InputGroupAddon, Input } from 'reactstrap';
-
+import '../App.css';
 
 class Header extends React.Component {
   constructor(props) {
@@ -33,9 +33,11 @@ class Header extends React.Component {
               <ul className="navbar-nav mx-auto">
                 <li className="nav-item"><a className="nav-link" href="#numeric">Science-Fictions</a></li>
                 <li className="nav-item"><a className="nav-link" href="#euratechnologies">Westerns</a></li>
-                <li className="nav-item"><a className="nav-link" href="#poles">Drames</a></li>
-                <li className="nav-item"><a className="nav-link" href="#dsc">Comédies</a></li>
-                <li className="nav-item"><a className="nav-link" href="#collaborators">Dessins-animés</a></li>
+                <li className="nav-item"><a className="nav-link" href="#poles">Drama</a></li>
+                <li className="nav-item"><a className="nav-link" href="#dsc">Comedy</a></li>
+                <li className="nav-item"><a className="nav-link" href="#collaborators">Thriller</a></li>
+                <li className="nav-item"><a className="nav-link" href="#collaborators">Horror</a></li>
+                <li className="nav-item"><a className="nav-link" href="#collaborators">Animation</a></li>
                 <li className="nav-item">
                   <Dropdown nav isOpen={this.state.dropdownOpen} toggle={this.toggle}>
                     <DropdownToggle nav caret>
