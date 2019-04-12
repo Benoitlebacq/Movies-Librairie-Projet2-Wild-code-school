@@ -1,12 +1,15 @@
 import React from "react";
 import axios from 'axios';
-import Youtube from "react-youtube"
+import Youtube from "react-youtube";
+import Casting from "./Casting";
+import CastTech from "./CastTech";
 
 class Fiche extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-        fiche:[], 
+        fiche:[],
+        genres: [], 
         videoId: ""
     };
   }
@@ -18,7 +21,8 @@ class Fiche extends React.Component {
       .then(response  => {   
          
         this.setState({        
-          fiche : response.data
+          fiche : response.data,
+          genres: response.data.genres
         }); 
 
         const apiKey = "AIzaSyAYQjF7_hRZGUMoUwlcUezlq33cGFz5SO0"; 
@@ -44,12 +48,33 @@ class Fiche extends React.Component {
   }
     render() {      
       return (  
-        <div>          
-         <h2 className="movieTitle">{this.state.fiche.original_title}</h2>
-         <img src= {"https://image.tmdb.org/t/p/w500" + this.state.fiche.backdrop_path} alt=""/>               
-         <div className="container" >{this.state.fiche.overview}</div>         
-         <h5>{this.state.fiche.release_date}</h5>    
-        <Youtube videoId={this.state.videoId} />    
+        <div>    
+          <Youtube videoId={this.state.videoId} /> 
+          <div className="movie-description">
+                <h1 className="movie-title">{this.state.fiche.original_title}</h1>
+                <h5>{this.state.fiche.release_date}</h5> 
+                <div className="movie-pic">
+                    <img className="movie-poster" src={"https://image.tmdb.org/t/p/w500" + this.state.fiche.poster_path} alt={this.state.fiche.original_title} />
+                </div>
+                <h2 className="movie-synopsis">Synopsis</h2>
+                <p>{this.state.fiche.overview}</p>
+                <div className="movie-genre">
+                    <ul>
+                        {this.state.genres === undefined ? ' ' : this.state.genres.map((genre) => {
+                            return <li>{genre.name}</li>
+                            }
+                        )
+                        }
+                    </ul>
+                </div>
+                <div className="movie-casting">
+                    <ul>
+                        <Casting idFilm={this.props.match.params.ficheNumber} />
+                        <CastTech idFilm={this.props.match.params.ficheNumber} />
+                    </ul>
+                </div>
+            </div>
+            <img src= {"https://image.tmdb.org/t/p/w500" + this.state.fiche.backdrop_path} alt=""/> 
         </div>        
       );
     }
