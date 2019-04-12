@@ -17,14 +17,13 @@ class Header extends React.Component {
     });
   }
   render() {
-    return (
-    
-
+    return ( 
       <Fragment>
         <div className="menu">
           <nav className="navbar navbar-expand-xl navbar-light">
-            <img className="LOGO" src="https://image.noelshack.com/fichiers/2019/15/5/1555076151-screenshot-from-2019-04-12-11-21-07-convertimage-1.png" />
-           
+            <a href="/">
+            <img className="LOGO"  src="https://image.noelshack.com/fichiers/2019/15/5/1555076151-screenshot-from-2019-04-12-11-21-07-convertimage-1.png" />
+            </a>
            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
           </button> 

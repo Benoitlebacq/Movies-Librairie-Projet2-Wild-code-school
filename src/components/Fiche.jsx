@@ -78,6 +78,7 @@ class Fiche extends React.Component {
                 <div className="movie-genre">
                     <ul>
                         {this.state.genres === undefined ? ' ' : this.state.genres.map((genre) => {
+                          
                             return <li>{genre.name}</li>
                             }
                         )
