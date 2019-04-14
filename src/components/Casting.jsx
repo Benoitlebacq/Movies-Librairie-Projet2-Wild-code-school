@@ -17,9 +17,7 @@ class Casting extends  React.Component {
             .then(resp => {
                 this.setState({
                     movieList: resp.data.cast                     
-                });
-                console.log("le tableau de roles")
-                console.log(resp.data.cast)
+                });                
             })
     }    
     render() {        
@@ -29,8 +27,9 @@ class Casting extends  React.Component {
             }).map((role)=>{
                 return  <div>
                 <RoleList
-                roles = {role.original_title}
+                moviePlayed = {role.original_title}
                 idMovie = {role.id}
+                key = {role.original_title}
                 />                
             </div>
             })
