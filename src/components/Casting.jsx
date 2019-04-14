@@ -6,21 +6,17 @@ class Casting extends  React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            movielist: []
-        }
-        console.log("premiere console")
-        console.log(this.props.match.params.castingNumber)
+            movieList: []
+        };        
     }    
     componentDidMount() {
         this.getMovielist()
     }
-    getMovielist (){
-        console.log(this.props.match.params.castingNumber)
+    getMovielist (){        
         axios.get(`https://api.themoviedb.org/3/person/${this.props.match.params.castingNumber}/movie_credits?api_key=a8a3380a564299f359c18e52aaa5bc79`)
             .then(resp => {
                 this.setState({
-                    movieList: resp.data
-                      
+                    movieList: resp.data                      
                 });
                 console.log("le tableau de roles")
                 console.log(resp.data.cast)
@@ -28,15 +24,14 @@ class Casting extends  React.Component {
     }    
     render() {        
         return (
-
+            
             <div>
-                <RoleList 
-                roles = {movieList.cast}
-
-                />
+                <RoleList
+                role = {this.state.movieList.data}
+                id = {this.props.match.params.castingNumber}
+                />                
             </div>
         )
     }
 }
-
 export default Casting;
