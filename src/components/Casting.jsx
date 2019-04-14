@@ -16,7 +16,7 @@ class Casting extends  React.Component {
         axios.get(`https://api.themoviedb.org/3/person/${this.props.match.params.castingNumber}/movie_credits?api_key=a8a3380a564299f359c18e52aaa5bc79`)
             .then(resp => {
                 this.setState({
-                    movieList: resp.data                      
+                    movieList: resp.data.cast                     
                 });
                 console.log("le tableau de roles")
                 console.log(resp.data.cast)
@@ -24,13 +24,16 @@ class Casting extends  React.Component {
     }    
     render() {        
         return (
-            
-            <div>
+            this.state.movieList.filter((movie)=>{
+                return movie.original_title
+            }).map((role)=>{
+                return  <div>
                 <RoleList
-                role = {this.state.movieList.data}
-                id = {this.props.match.params.castingNumber}
+                roles = {role.original_title}
+                idMovie = {role.id}
                 />                
             </div>
+            })
         )
     }
 }
