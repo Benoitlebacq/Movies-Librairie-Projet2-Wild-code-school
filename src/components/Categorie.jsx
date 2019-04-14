@@ -24,7 +24,7 @@ class Categorie extends Component {
     render() {
       return (
       <div className = "mt-5">
-      <h2 className="categoriesName ml-3" id="${this.props.type}">{this.props.type}</h2>
+      <h2 className="categoriesName ml-3">{this.props.type}</h2>
       <div className = "containing">   
           {this.state.movies.map((film, idx) => {
           return (
