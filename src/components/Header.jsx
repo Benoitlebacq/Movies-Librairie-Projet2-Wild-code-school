@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import { Dropdown, DropdownItem, DropdownToggle, DropdownMenu, InputGroup, InputGroupAddon, Input } from 'reactstrap';
-
+import '../App.css';
 
 class Header extends React.Component {
   constructor(props) {
@@ -23,8 +23,7 @@ class Header extends React.Component {
       <Fragment>
         <div className="menu">
           <nav className="navbar navbar-expand-xl navbar-light">
-            <img className="LOGO" src="https://image.noelshack.com/fichiers/2019/15/5/1555066583-screenshot-from-2019-04-12-11-21-07-convertimage.png
-" />
+            <img className="LOGO" src="https://image.noelshack.com/fichiers/2019/15/5/1555076151-screenshot-from-2019-04-12-11-21-07-convertimage-1.png" />
            
            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
@@ -33,9 +32,11 @@ class Header extends React.Component {
               <ul className="navbar-nav mx-auto">
                 <li className="nav-item"><a className="nav-link" href="#numeric">Science-Fictions</a></li>
                 <li className="nav-item"><a className="nav-link" href="#euratechnologies">Westerns</a></li>
-                <li className="nav-item"><a className="nav-link" href="#poles">Drames</a></li>
-                <li className="nav-item"><a className="nav-link" href="#dsc">Comédies</a></li>
-                <li className="nav-item"><a className="nav-link" href="#collaborators">Dessins-animés</a></li>
+                <li className="nav-item"><a className="nav-link" href="#poles">Drama</a></li>
+                <li className="nav-item"><a className="nav-link" href="#dsc">Comedy</a></li>
+                <li className="nav-item"><a className="nav-link" href="#collaborators">Thriller</a></li>
+                <li className="nav-item"><a className="nav-link" href="#collaborators">Horror</a></li>
+                <li className="nav-item"><a className="nav-link" href="#collaborators">Animation</a></li>
                 <li className="nav-item">
                   <Dropdown nav isOpen={this.state.dropdownOpen} toggle={this.toggle}>
                     <DropdownToggle nav caret>

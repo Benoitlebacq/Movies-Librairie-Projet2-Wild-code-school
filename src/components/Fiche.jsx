@@ -62,7 +62,17 @@ class Fiche extends React.Component {
                 </div>
               <div className="movie-infos"> 
               <div className="movie-synopsis"> 
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <br/>
                 <h2 className="movie-synopsis-title">Synopsis</h2>
+                <br/>
                 <p>{this.state.fiche.overview}</p>
                 </div>
                 <div className="movie-genre">
