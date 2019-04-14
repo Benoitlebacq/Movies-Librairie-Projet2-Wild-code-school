@@ -18,7 +18,7 @@ class Header extends React.Component {
   }
   render() {
     return ( 
-      <Fragment>
+      <Fragment>       
         <div className="menu">
           <nav className="navbar navbar-expand-xl navbar-light">
             <a href="/">
@@ -29,13 +29,13 @@ class Header extends React.Component {
           </button> 
             <div className="collapse navbar-collapse" id="navbarNav">
               <ul className="navbar-nav mx-auto">
-                <li className="nav-item"><a className="nav-link" href="#numeric">Science-Fictions</a></li>
-                <li className="nav-item"><a className="nav-link" href="#euratechnologies">Westerns</a></li>
-                <li className="nav-item"><a className="nav-link" href="#poles">Drama</a></li>
-                <li className="nav-item"><a className="nav-link" href="#dsc">Comedy</a></li>
-                <li className="nav-item"><a className="nav-link" href="#collaborators">Thriller</a></li>
-                <li className="nav-item"><a className="nav-link" href="#collaborators">Horror</a></li>
-                <li className="nav-item"><a className="nav-link" href="#collaborators">Animation</a></li>
+                <li className="nav-item"><a className="nav-link" href="#Science Fiction">Science-Fictions</a></li>
+                <li className="nav-item"><a className="nav-link" href="#Westerns">Westerns</a></li>
+                <li className="nav-item"><a className="nav-link" href="#Drama">Drama</a></li>
+                <li className="nav-item"><a className="nav-link" href="#Comedy">Comedy</a></li>
+                <li className="nav-item"><a className="nav-link" href="#Thriller">Thriller</a></li>
+                <li className="nav-item"><a className="nav-link" href="#Horror">Horror</a></li>
+                <li className="nav-item"><a className="nav-link" href="#Animation">Animation</a></li>
                 <li className="nav-item">
                   <Dropdown nav isOpen={this.state.dropdownOpen} toggle={this.toggle}>
                     <DropdownToggle nav caret>

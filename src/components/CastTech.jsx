@@ -9,7 +9,7 @@ class CastTech extends React.Component{
         }
     }
     componentDidMount() {
-        axios.get("https://api.themoviedb.org/3/movie/" + this.props.idFilm + "/credits?api_key=a8a3380a564299f359c18e52aaa5bc79").then(res => {         
+        axios.get(`https://api.themoviedb.org/3/movie/ ${this.props.idFilm} /credits?api_key=a8a3380a564299f359c18e52aaa5bc79`).then(res => {         
           this.setState({
             crew: res.data.crew
           });
