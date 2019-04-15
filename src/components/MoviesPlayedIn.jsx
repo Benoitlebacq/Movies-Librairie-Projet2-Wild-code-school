@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";  
 import axios from "axios";
-
 class MoviePlayedIn extends React.Component {
     constructor(props) {
         super(props);
@@ -29,9 +28,7 @@ class MoviePlayedIn extends React.Component {
               isLoaded()
               ?<Link  to={`/fiche/${this.props.cle}`}><img src ={`https://image.tmdb.org/t/p/w500${this.state.movies.poster_path}`} alt="" className="img-card-actor-movies"/></Link>
               :<p>Loading...</p>
-
-            } 
-            
+            }             
           </div>
       </div>
     );

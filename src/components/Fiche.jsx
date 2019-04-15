@@ -5,7 +5,6 @@ import CastingActors from "./CastingActors";
 import CastTech from "./CastTech";
 import CastMusic from "./CastMusic";
 import CastDirector from "./CastDirector";
-
 class Fiche extends React.Component {
   constructor(props) {
     super(props);
@@ -25,7 +24,6 @@ class Fiche extends React.Component {
           fiche : response.data,
           genres: response.data.genres
         }); 
-
         const apiKey = "AIzaSyBNHhT2wVa0lrIZsmMlTlTgIhY1VjrpZ7c"; 
         const query = `${response.data.original_title} trailer`;
     

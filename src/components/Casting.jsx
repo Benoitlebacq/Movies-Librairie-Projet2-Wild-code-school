@@ -1,7 +1,6 @@
 import React from "react";
 import axios from 'axios';
 import RoleList from "./RoleList"
-
 class Casting extends  React.Component {
     constructor(props) {
         super(props);
