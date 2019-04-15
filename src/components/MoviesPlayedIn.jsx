@@ -16,16 +16,18 @@ class MoviePlayedIn extends React.Component {
       axios.get(`https://api.themoviedb.org/3/movie/${this.props.cle}?api_key=a8a3380a564299f359c18e52aaa5bc79`)
         .then(response  =>  {           
            this.setState({            
-            movies : response.data.results
+            movies : response.data
+            
           });
+          console.log(response.data)
       });    
     }
   render() {
     return (
       <div className= "movie-card">                
-          <div className="card border-0 m-1">
+          <div className=" border-0 m-1">
             
-            <Link  to={`/fiche/${this.props.cle}`}><img src ={this.props.image} alt="" className="img-card"/></Link>
+            <Link  to={`/fiche/${this.props.cle}`}><img src ={`https://image.tmdb.org/t/p/w500${this.state.movies.poster_path}`} alt="" className="img-card-actor-movies"/></Link>
           </div>
       </div>
     );

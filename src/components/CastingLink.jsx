@@ -12,6 +12,5 @@ class CastingLink extends React.Component {
             </div>
         )
     }
-
 }
 export default CastingLink;
