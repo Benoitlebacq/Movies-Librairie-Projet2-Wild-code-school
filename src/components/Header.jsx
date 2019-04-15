@@ -21,9 +21,9 @@ class Header extends React.Component {
       <Fragment>       
         <div className="menu">
           <nav className="navbar navbar-expand-xl navbar-light">
-            <a href="/">
+            
             <img className="LOGO"  src="https://image.noelshack.com/fichiers/2019/15/5/1555076151-screenshot-from-2019-04-12-11-21-07-convertimage-1.png" />
-            </a>
+            
            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
           </button> 
@@ -36,6 +36,9 @@ class Header extends React.Component {
                 <li className="nav-item"><a className="nav-link" href="#Thriller">Thriller</a></li>
                 <li className="nav-item"><a className="nav-link" href="#Horror">Horror</a></li>
                 <li className="nav-item"><a className="nav-link" href="#Animation">Animation</a></li>
+                <li className="nav-item"><a className="nav-link" href="#Documentary">Documentary</a></li>
+                <li className="nav-item"><a className="nav-link" href="#War">War</a></li>
+                <li className="nav-item"><a className="nav-link" href="#History">History</a></li>
                 <li className="nav-item">
                   <Dropdown nav isOpen={this.state.dropdownOpen} toggle={this.toggle}>
                     <DropdownToggle nav caret>

@@ -1,9 +1,10 @@
 import React from "react";
 import axios from 'axios';
 import Youtube from "react-youtube";
-import Casting from "./Casting";
+import CastingActors from "./CastingActors";
 import CastTech from "./CastTech";
-
+import CastMusic from "./CastMusic";
+import CastDirector from "./CastDirector";
 
 class Fiche extends React.Component {
   constructor(props) {
@@ -18,9 +19,8 @@ class Fiche extends React.Component {
     this.getFiche()
   }
   getFiche() { 
-    axios.get(`https://api.themoviedb.org/3/movie/ ${this.props.match.params.ficheNumber} + ?api_key=a8a3380a564299f359c18e52aaa5bc79` )
-      .then(response  => {   
-         
+    axios.get(`https://api.themoviedb.org/3/movie/ ${this.props.match.params.ficheNumber} ?api_key=a8a3380a564299f359c18e52aaa5bc79` )
+      .then(response  => {         
         this.setState({        
           fiche : response.data,
           genres: response.data.genres
@@ -44,13 +44,11 @@ class Fiche extends React.Component {
           .catch(function(error) {
             console.log("Echec appel API Youtube: " + error);
     });
-
     });    
   }
     render() {      
       return (  
-        <div>    
-           
+        <div>           
           <div className="movie-description">
                 <h1 className="movie-title">{this.state.fiche.original_title}</h1> 
                 <div className="movie-pic">
@@ -58,7 +56,6 @@ class Fiche extends React.Component {
 
                     <div className="youtube"><Youtube className="heigh-youtube" videoId={this.state.videoId} /></div>
                     <p className="movie-date">Release date : {this.state.fiche.release_date}</p>
-
                 </div>
               <div className="movie-infos"> 
               <div className="movie-synopsis"> 
@@ -68,8 +65,7 @@ class Fiche extends React.Component {
                 </div>
                 <div className="movie-genre">
                     <ul>
-                        {this.state.genres === undefined ? ' ' : this.state.genres.map((genre) => {
-                          
+                        {this.state.genres === undefined ? ' ' : this.state.genres.map((genre) => {                          
                             return <li>{genre.name}</li>
                             }
                         )
@@ -78,8 +74,14 @@ class Fiche extends React.Component {
                 </div>
                 <div className="movie-casting">
                 <h4>Casting :</h4>
+                    <ul className="ul-actors-pics">
+                        <CastingActors idFilm={this.props.match.params.ficheNumber} />
+                    </ul>
+                </div>
+                <div className="movie-director">
+                <h4>Director :</h4>
                     <ul>
-                        <Casting idFilm={this.props.match.params.ficheNumber} />
+                        <CastDirector idFilm={this.props.match.params.ficheNumber} />
                     </ul>
                 </div>
                 <div className="movie-casttech">
@@ -87,6 +89,12 @@ class Fiche extends React.Component {
                     <ul>
                         <CastTech idFilm={this.props.match.params.ficheNumber} />
                     </ul>
+                  </div>
+                <div className="movie-music">
+                <h4>Music :</h4>
+                  <ul>
+                      <CastMusic idFilm={this.props.match.params.ficheNumber} />
+                  </ul>
                 </div>
                 <img src= {"https://image.tmdb.org/t/p/w500" + this.state.fiche.backdrop_path} alt=""/>
             </div>
