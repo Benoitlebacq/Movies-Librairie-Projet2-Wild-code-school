@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";  
+import axios from "axios";
 
 class MoviePlayedIn extends React.Component {
     constructor(props) {
@@ -12,11 +13,10 @@ class MoviePlayedIn extends React.Component {
       this.getMovie();
     }
     getMovie() {    
-      fetch(`https://api.themoviedb.org/3/person/${this.props.idMovie}/movie_credits?api_key=a8a3380a564299f359c18e52aaa5bc79`)
-        .then(response  =>  response.json())
-        .then(data  => {           
+      axios.get(`https://api.themoviedb.org/3/movie/${this.props.cle}?api_key=a8a3380a564299f359c18e52aaa5bc79`)
+        .then(response  =>  {           
            this.setState({            
-            movies : data.results
+            movies : response.data.results
           });
       });    
     }
@@ -25,11 +25,10 @@ class MoviePlayedIn extends React.Component {
       <div className= "movie-card">                
           <div className="card border-0 m-1">
             
-            <Link  to={`/fiche/${this.props.idMovie}`}><img src ={this.props.image} alt="" className="img-card"/></Link>
+            <Link  to={`/fiche/${this.props.cle}`}><img src ={this.props.image} alt="" className="img-card"/></Link>
           </div>
       </div>
     );
   }
 }
 export default MoviePlayedIn;
-

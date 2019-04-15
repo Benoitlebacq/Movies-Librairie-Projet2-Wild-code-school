@@ -10,7 +10,7 @@ class RoleList extends React.Component{
         return (
            <div>
                <MoviePlayedIn 
-               idMovie = {this.props.idMovie}
+               cle = {this.props.idMovie}
                key = {this.props.idMovie}
                               
                />
