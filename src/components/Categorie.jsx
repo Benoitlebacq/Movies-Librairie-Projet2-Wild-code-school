@@ -41,3 +41,6 @@ class Categorie extends Component {
   }
 };
 export default Categorie;
+/*inintialiser un state page = 1 
+appeler le state.page dans la get movie
+puis sur un onscroll on va incrementer le state.page de 1 et rappeler get movie*/
