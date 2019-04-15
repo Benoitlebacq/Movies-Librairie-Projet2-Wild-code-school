@@ -23,17 +23,15 @@ class Fiche extends React.Component {
         this.setState({        
           fiche : response.data,
           genres: response.data.genres
-        }); 
-        const apiKey = "AIzaSyBNHhT2wVa0lrIZsmMlTlTgIhY1VjrpZ7c"; 
-        const query = `${response.data.original_title} trailer`;
-    
+        });         
+        const query = `${response.data.original_title} trailer`;    
         axios
           .create({
             baseURL: "https://content.googleapis.com/youtube/v3",
             timeout: 1000
           })
           .get(
-            `/search?q=${query}&part=snippet&maxResults=1&type=video&key=${apiKey}`
+            `/search?q=${query}&part=snippet&maxResults=1&type=video&key=AIzaSyBNHhT2wVa0lrIZsmMlTlTgIhY1VjrpZ7c`
           )
           .then(response => {
             const vidId = response.data.items[0].id.videoId;
