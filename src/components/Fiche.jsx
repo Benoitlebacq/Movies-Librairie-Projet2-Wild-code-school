@@ -18,7 +18,7 @@ class Fiche extends React.Component {
     this.getFiche()
   }
   getFiche() { 
-    axios.get("https://api.themoviedb.org/3/movie/" + this.props.match.params.ficheNumber + "?api_key=a8a3380a564299f359c18e52aaa5bc79" )
+    axios.get(`https://api.themoviedb.org/3/movie/ ${this.props.match.params.ficheNumber} + ?api_key=a8a3380a564299f359c18e52aaa5bc79` )
       .then(response  => {   
          
         this.setState({        
@@ -62,15 +62,6 @@ class Fiche extends React.Component {
                 </div>
               <div className="movie-infos"> 
               <div className="movie-synopsis"> 
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
-              <br/>
                 <h2 className="movie-synopsis-title">Synopsis</h2>
                 <br/>
                 <p>{this.state.fiche.overview}</p>
@@ -78,6 +69,7 @@ class Fiche extends React.Component {
                 <div className="movie-genre">
                     <ul>
                         {this.state.genres === undefined ? ' ' : this.state.genres.map((genre) => {
+                          
                             return <li>{genre.name}</li>
                             }
                         )
