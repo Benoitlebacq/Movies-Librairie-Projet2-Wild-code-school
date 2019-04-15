@@ -102,8 +102,8 @@ section.route-section {
   left: 0;
   background-color: black;
 }
-.route-section {
-  display: flex;
+.flexisation {
+  display: inline-flex;
   flex-wrap: wrap;
   margin: auto;
   justify-content: center
