@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios'
 
-class CastTech extends React.Component{
+class CastDirector extends React.Component{
     constructor(props){
         super(props);
         this.state = {
@@ -18,7 +18,7 @@ class CastTech extends React.Component{
     render(){
         return(    
          this.state.crew.filter((member,i)=>{
-             return member.job.includes('Producer');
+             return member.job.includes('Director');
          }).map((casting) => {
               return <li>{casting.job} : {casting.name}</li>
             }
@@ -26,4 +26,4 @@ class CastTech extends React.Component{
         )}
         
     }
-export default CastTech;
+export default CastDirector;

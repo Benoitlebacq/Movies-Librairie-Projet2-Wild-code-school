@@ -36,6 +36,9 @@ class Header extends React.Component {
                 <li className="nav-item"><a className="nav-link" href="#Thriller">Thriller</a></li>
                 <li className="nav-item"><a className="nav-link" href="#Horror">Horror</a></li>
                 <li className="nav-item"><a className="nav-link" href="#Animation">Animation</a></li>
+                <li className="nav-item"><a className="nav-link" href="#Documentary">Documentary</a></li>
+                <li className="nav-item"><a className="nav-link" href="#War">War</a></li>
+                <li className="nav-item"><a className="nav-link" href="#History">History</a></li>
                 <li className="nav-item">
                   <Dropdown nav isOpen={this.state.dropdownOpen} toggle={this.toggle}>
                     <DropdownToggle nav caret>
