@@ -25,13 +25,15 @@ class Casting extends  React.Component {
             this.state.movieList.filter((movie)=>{
                 return movie.original_title
             }).map((role)=>{
-                return  <div>
+                return <div className="flexisation">
                 <RoleList
                 moviePlayed = {role.original_title}
                 idMovie = {role.id}
                 key = {role.original_title}
                 />                
             </div>
+            
+            
             })
         )
     }
