@@ -15,6 +15,9 @@
 .img-card{
   height:30vh;
 }
+.img-card-actor-movies{
+  height:30vh;
+}
 .categoriesName {
   font-family: 'Anton', sans-serif;
 }
@@ -44,10 +47,20 @@
   width: 10%;
   margin : 8px;
 }
-ul {
+.movie-pic {
+  width: 50px;
+  }
+.movie-casting {
+  justify-content: center;
+}
+.movie-description{
+  text-align: center;
+}
+ul
+ {
   list-style: none;
 }
-.LOGO {
+.logo {
   width: 8em
 }
 .pageFiche {
@@ -55,4 +68,43 @@ ul {
 }
 .nav-link{
   color : green !important;
+}
+
+/* routing */
+
+.fade-enter {
+  opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+div.transition-group {
+  position: relative;
+
+}
+
+section.route-section {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: black;
+}
+.flexisation {
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: center
 }
