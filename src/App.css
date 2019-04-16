@@ -1,5 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Monoton|Playfair+Display+SC');
 
+@font-face {
+  font-family: 'Monoton';
+  src: url("./font/Monoton-Regular.ttf")
+}
 .App { 
   text-align: left;
   background-color: black;
@@ -23,7 +26,7 @@
 .img-card:hover {
   height: 35vh;;
 }
-.movie-description {
+h1,h2,h3,h4, .categoriesName {
   width: 90%;
   margin-left: 10%;
   margin-right: 10%;

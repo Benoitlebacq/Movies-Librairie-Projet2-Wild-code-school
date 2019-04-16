@@ -3,8 +3,6 @@ import axios from 'axios';
 import Youtube from "react-youtube";
 import Casting from "./Casting";
 import CastTech from "./CastTech";
-
-
 class Fiche extends React.Component {
   constructor(props) {
     super(props);
