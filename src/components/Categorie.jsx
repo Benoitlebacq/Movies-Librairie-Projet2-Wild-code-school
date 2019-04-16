@@ -24,9 +24,11 @@ class Categorie extends Component {
   upPageNumber =() => {
     this.setState({
       page : this.state.page +1, 
-    })
-    console.log(this.state.page)
+    });
+    console.log(this.state.page);
+    this.getMovie();
   }
+
   render() {
     return (
     <div className = "mt-5">
