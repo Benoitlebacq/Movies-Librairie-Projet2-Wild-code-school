@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton|Playfair+Display+SC');
+
 .App { 
   text-align: left;
   background-color: black;
@@ -25,13 +27,18 @@
   width: 90%;
   margin-left: 10%;
   margin-right: 10%;
+  font-family: 'Monoton', cursive;
+  color: #45D932 ;
 }
+
 .movie-synopsis {
   text-align: left;
 }
 .movie-title{
   text-align: left;
   padding-bottom : 15px;  
+  font-family: 'Monoton', cursive;
+  color : 	#45D932 ; 
 }
 .movie-pic{
   display: inline;
