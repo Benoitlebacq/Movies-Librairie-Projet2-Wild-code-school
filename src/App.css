@@ -1,3 +1,8 @@
+
+@font-face {
+  font-family: 'Monoton';
+  src: url("./font/Monoton-Regular.ttf")
+}
 .App { 
   text-align: left;
   background-color: black;
@@ -24,17 +29,22 @@
 .img-card:hover {
   height: 35vh;;
 }
-.movie-description {
+h1,h2,h3,h4, .categoriesName {
   width: 90%;
   margin-left: 10%;
   margin-right: 10%;
+  font-family: 'Monoton', cursive;
+  color: #45D932 ;
 }
+
 .movie-synopsis {
   text-align: left;
 }
 .movie-title{
   text-align: left;
   padding-bottom : 15px;  
+  font-family: 'Monoton', cursive;
+  color : 	#45D932 ; 
 }
 .movie-pic{
   display: inline;
@@ -69,6 +79,7 @@ ul
 .nav-link{
   color : green !important;
 }
+
 
 /* routing */
 
@@ -108,3 +119,4 @@ section.route-section {
   margin: auto;
   justify-content: center
 }
+
