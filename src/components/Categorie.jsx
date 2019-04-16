@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Movie from "./Movie";
-import '../App.css';
 class Categorie extends Component {
   constructor(props) {
     super(props);
