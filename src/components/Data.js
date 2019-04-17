@@ -5,14 +5,14 @@ const Data =[
   },
   {
     type: "Top rated",          
-    url : "https://api.themoviedb.org/3/movie/top_rated?api_key=a8a3380a564299f359c18e52aaa5bc79&page="       
+    url : "https://api.themoviedb.org/3/movie/top_rated?api_key=1092ee57947c8bdfc25a5a0641ecb8ec&page="       
   },
   {type: "Upcoming",          
     url : "https://api.themoviedb.org/3/movie/upcoming?api_key=a8a3380a564299f359c18e52aaa5bc79&page="     
   },
   {
     type: "Western",          
-    url : "https://api.themoviedb.org/3/discover/movie?api_key=a8a3380a564299f359c18e52aaa5bc79&with_genres=37&page="     
+    url : "https://api.themoviedb.org/3/discover/movie?api_key=1092ee57947c8bdfc25a5a0641ecb8ec&with_genres=37&page="     
   },
   {
     type: "Drama",          
@@ -20,7 +20,7 @@ const Data =[
   },
   {
     type: "Thriller",          
-    url : "https://api.themoviedb.org/3/discover/movie?api_key=a8a3380a564299f359c18e52aaa5bc79&with_genres=53&page="     
+    url : "https://api.themoviedb.org/3/discover/movie?api_key=1092ee57947c8bdfc25a5a0641ecb8ec&with_genres=53&page="     
   },
   {
     type: "Science Fiction",          
@@ -28,7 +28,7 @@ const Data =[
   },
   {
     type: "Horror",          
-    url : "https://api.themoviedb.org/3/discover/movie?api_key=a8a3380a564299f359c18e52aaa5bc79&with_genres=27&page="     
+    url : "https://api.themoviedb.org/3/discover/movie?api_key=1092ee57947c8bdfc25a5a0641ecb8ec&with_genres=27&page="     
   },
   {
     type: "Comedy",          
@@ -36,11 +36,11 @@ const Data =[
   },
   {
     type: "Animation",          
-    url : "https://api.themoviedb.org/3/discover/movie?api_key=a8a3380a564299f359c18e52aaa5bc79&with_genres=16&page="     
+    url : "https://api.themoviedb.org/3/discover/movie?api_key=1092ee57947c8bdfc25a5a0641ecb8ec&with_genres=16&page="     
   },
   {
     type: "Documentary",          
-    url : "https://api.themoviedb.org/3/discover/movie?api_key=a8a3380a564299f359c18e52aaa5bc79&with_genres=99&page="     
+    url : "https://api.themoviedb.org/3/discover/movie?api_key=1092ee57947c8bdfc25a5a0641ecb8ec&with_genres=99&page="     
   },
   {
     type: "War",          
@@ -48,11 +48,11 @@ const Data =[
   },
   {
     type: "Music",          
-    url : "https://api.themoviedb.org/3/discover/movie?api_key=a8a3380a564299f359c18e52aaa5bc79&with_genres=10402&page="     
+    url : "https://api.themoviedb.org/3/discover/movie?api_key=1092ee57947c8bdfc25a5a0641ecb8ec&with_genres=10402&page="     
   },
   {
     type: "Fantasy",          
-    url : "https://api.themoviedb.org/3/discover/movie?api_key=a8a3380a564299f359c18e52aaa5bc79&with_genres=14&page="     
+    url : "https://api.themoviedb.org/3/discover/movie?api_key=1092ee57947c8bdfc25a5a0641ecb8ec&with_genres=14&page="     
   },
   {
     type: "History",          
@@ -60,7 +60,7 @@ const Data =[
   },
   {
     type: "Best of French language",          
-    url : "https://api.themoviedb.org/3/discover/movie?api_key=a8a3380a564299f359c18e52aaa5bc79&with_original_language=fr&page="     
+    url : "https://api.themoviedb.org/3/discover/movie?api_key=1092ee57947c8bdfc25a5a0641ecb8ec&with_original_language=fr&page="     
   }
 ]
   export default Data;
