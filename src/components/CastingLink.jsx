@@ -4,10 +4,9 @@ class CastingLink extends React.Component {
     render(){
         return (
             <div className="actors-pics">              
-
                 <Link to={`/casting/${this.props.id}`}> <img src={this.props.img} className="actor-pic"/></Link>
                 <br/>
-                <span>{this.props.name}</span>
+                <p>{this.props.name}</p>
             </div>
         )
     }
