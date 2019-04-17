@@ -79,7 +79,7 @@ class Header extends React.Component {
              value={this.state.search}
              onChange={this.onChange}
             />
-            <Link  to={`/`}>
+            <Link  to={`/searchgallery/:${this.state.search}`}>
             <button
             onClick= {this.console}
             >Search</button></Link>
