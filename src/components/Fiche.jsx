@@ -5,6 +5,7 @@ import CastingActors from "./CastingActors";
 import CastTech from "./CastTech";
 import CastMusic from "./CastMusic";
 import CastDirector from "./CastDirector";
+import '../Fiche.css';
 
 class Fiche extends React.Component {
   constructor(props) {
