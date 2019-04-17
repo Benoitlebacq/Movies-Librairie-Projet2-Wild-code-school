@@ -1,5 +1,6 @@
 import React from "react";
 import Categorie from "./Categorie";
+import Footer from "./Footer";
 import Data from "./Data";
 
 class HomePage extends React.Component {
@@ -22,7 +23,10 @@ class HomePage extends React.Component {
           >
           </Categorie>
           )
-        })}         
+        })}   
+        <div className="footer">
+          <Footer />
+        </div>      
       </div>  
     );
   }
