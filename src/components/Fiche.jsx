@@ -5,6 +5,7 @@ import CastingActors from "./CastingActors";
 import CastTech from "./CastTech";
 import CastMusic from "./CastMusic";
 import CastDirector from "./CastDirector";
+import Footer from "./Footer";
 
 class Fiche extends React.Component {
   constructor(props) {
@@ -96,6 +97,11 @@ class Fiche extends React.Component {
                 <img src= {"https://image.tmdb.org/t/p/w500" + this.state.fiche.backdrop_path} alt=""/>
             </div>
             </div>
+
+            <div className="footer">
+          <Footer />
+        </div> 
+
         </div>        
       );
     }
