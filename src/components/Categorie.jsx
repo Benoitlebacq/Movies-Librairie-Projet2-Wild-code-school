@@ -15,18 +15,19 @@ class Categorie extends Component {
     const baseUrl = this.props.url  ;
     fetch(baseUrl + this.state.page)
       .then(response  =>  response.json())
-      .then(data  => {           
-          this.setState({            
-          movies : data.results
+      .then(data  => {   
+        let newList = [...this.state.movies, ...data.results];
+        this.setState({            
+          movies : newList
         });
     });    
   }
   upPageNumber =() => {
     this.setState({
       page : this.state.page +1, 
+    }, ()=>{
+      this.getMovie();
     });
-    console.log(this.state.page);
-    this.getMovie();
   }
 
   render() {
