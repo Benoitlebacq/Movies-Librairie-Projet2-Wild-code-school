@@ -1,20 +1,19 @@
 import React, { Fragment } from "react";
-import { Dropdown, DropdownItem, DropdownToggle, DropdownMenu, InputGroup, InputGroupAddon, Input } from 'reactstrap';
+import {Dropdown, DropdownItem, DropdownToggle, DropdownMenu, InputGroup, InputGroupAddon, Input } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import '../App.css';
-import { NavLink } from 'react-router-dom' ;
 class Header extends React.Component {
   constructor(props) {
     super(props);
 
     this.toggle = this.toggle.bind(this);
     this.state = {
-      dropdownOpen: false
+      dropdownOpen: false,
     };
   }
   toggle() {
     this.setState({
-      dropdownOpen: !this.state.dropdownOpen
+      dropdownOpen: !this.state.dropdownOpen,
     });
   }
   render() {
@@ -44,11 +43,11 @@ class Header extends React.Component {
                     Listes
                 </DropdownToggle>
                   <DropdownMenu>
-                    <DropdownItem>Mes favoris</DropdownItem>
-                    <DropdownItem >A regarder plus tard</DropdownItem>
-                    <DropdownItem>Autres liste</DropdownItem>
+                    <DropdownItem>My favorites</DropdownItem>
+                    <DropdownItem >To see later</DropdownItem>
+                    <DropdownItem>Others lists</DropdownItem>
                     <DropdownItem divider />
-                    <DropdownItem>+ Nouvelle liste</DropdownItem>
+                    <DropdownItem>+ Add liste</DropdownItem>
                   </DropdownMenu>
                 </Dropdown>
               </li>
