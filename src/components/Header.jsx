@@ -27,16 +27,16 @@ class Header extends React.Component {
                 </NavLink></li>
            </ul>
             <ul className="navbar-nav mx-auto">
-              <li><NavLink activeClassName="active" className="nav-link" exact to="/genres=878">Science Fiction</NavLink></li>
-              <li><NavLink activeClassName="active" className="nav-link" exact to="/genres=37">Westerns</NavLink></li>
-              <li><NavLink activeClassName="active" className="nav-link" exact to="/genres=18">Drama</NavLink></li>
-              <li><NavLink activeClassName="active" className="nav-link" exact to="/genres=35">Comedy</NavLink></li>
-              <li><NavLink activeClassName="active" className="nav-link" exact to="/genres=53">Thriller</NavLink></li>
-              <li><NavLink activeClassName="active" className="nav-link" exact to="/genres=27">Horror</NavLink></li>
-              <li><NavLink activeClassName="active" className="nav-link" exact to="/genres=16">Animation</NavLink></li>
-              <li><NavLink activeClassName="active" className="nav-link" exact to="/genres=99">Documentary</NavLink></li>
-              <li><NavLink activeClassName="active" className="nav-link" exact to="/genres=10752">War</NavLink></li>
-              <li><NavLink activeClassName="active" className="nav-link" exact to="/genres=36">History</NavLink></li>
+              <li><NavLink activeClassName="active" className="nav-link" exact to="/Science Fiction">Science Fiction</NavLink></li>
+              <li><NavLink activeClassName="active" className="nav-link" exact to="/Westerns">Westerns</NavLink></li>
+              <li><NavLink activeClassName="active" className="nav-link" exact to="/Drama">Drama</NavLink></li>
+              <li><NavLink activeClassName="active" className="nav-link" exact to="/Comedy">Comedy</NavLink></li>
+              <li><NavLink activeClassName="active" className="nav-link" exact to="/Thriller">Thriller</NavLink></li>
+              <li><NavLink activeClassName="active" className="nav-link" exact to="/Horror">Horror</NavLink></li>
+              <li><NavLink activeClassName="active" className="nav-link" exact to="/Animation">Animation</NavLink></li>
+              <li><NavLink activeClassName="active" className="nav-link" exact to="/gDocumentary">Documentary</NavLink></li>
+              <li><NavLink activeClassName="active" className="nav-link" exact to="/War">War</NavLink></li>
+              <li><NavLink activeClassName="active" className="nav-link" exact to="/History">History</NavLink></li>
               <li className="nav-item">
                 <Dropdown nav isOpen={this.state.dropdownOpen} toggle={this.toggle}>
                   <DropdownToggle nav caret>
