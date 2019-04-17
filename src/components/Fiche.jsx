@@ -99,6 +99,5 @@ class Fiche extends React.Component {
         </div>        
       );
     }
-  }
-  
+  }  
   export default Fiche;

@@ -8,7 +8,7 @@ class HomePage extends React.Component {
     this.state = {
       Data
     };
-  }  
+  }
   render() {
     return (
       <div>

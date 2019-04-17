@@ -12,7 +12,7 @@ class MoviePlayedIn extends React.Component {
       this.getMovie();
     }
     getMovie() {    
-      axios.get(`https://api.themoviedb.org/3/movie/${this.props.cle}?api_key=a8a3380a564299f359c18e52aaa5bc79`)
+      axios.get(`https://api.themoviedb.org/3/movie/${this.props.cle}?api_key=ff37a1a34cd2beecb41b30cbfda1916b`)
         .then(response  =>  {           
            this.setState({            
             movies : response.data            
