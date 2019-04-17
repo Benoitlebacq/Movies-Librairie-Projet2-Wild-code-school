@@ -40,7 +40,7 @@ const Data =[
   },
   {
     type: "Documentary",          
-    url : "https://api.themoviedb.org/3/discover/movie?api_key=1092ee57947c8bdfc25a5a0641ecb8ec&with_genres=99&page=2"     
+    url : "https://api.themoviedb.org/3/discover/movie?api_key=1092ee57947c8bdfc25a5a0641ecb8ec&with_genres=99&page="     
   },
   {
     type: "War",          
