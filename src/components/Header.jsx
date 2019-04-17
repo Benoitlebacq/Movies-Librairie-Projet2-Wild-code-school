@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import {Dropdown, DropdownItem, DropdownToggle, DropdownMenu, InputGroup, InputGroupAddon, Input } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import '../App.css';
+import { Link } from "react-router-dom"; 
 class Header extends React.Component {
   constructor(props) {
     super(props);
@@ -9,8 +10,25 @@ class Header extends React.Component {
     this.toggle = this.toggle.bind(this);
     this.state = {
       dropdownOpen: false,
+
+      search :""
     };
+    this.onChange = this.onChange.bind(this);
+
+    this.console = this.console.bind(this);
   }
+
+  onChange(e) {
+    this.setState({
+      search: e.target.value,
+    });
+  }
+
+  console(e){
+    console.log(this.state.search)
+
+  }
+
   toggle() {
     this.setState({
       dropdownOpen: !this.state.dropdownOpen,
@@ -56,8 +74,15 @@ class Header extends React.Component {
         </div>
         <div className="recherche">
           <InputGroup>
-            <InputGroupAddon addonType="prepend">@</InputGroupAddon>
-            <Input placeholder="Rechercher" />
+            <InputGroupAddon addonType="prepend"></InputGroupAddon>
+            <Input placeholder="Rechercher un film" 
+             value={this.state.search}
+             onChange={this.onChange}
+            />
+            <Link  to={`/`}>
+            <button
+            onClick= {this.console}
+            >Search</button></Link>
           </InputGroup>
         </div>
       </Fragment>
