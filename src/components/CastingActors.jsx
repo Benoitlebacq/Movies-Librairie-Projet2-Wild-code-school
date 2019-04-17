@@ -9,7 +9,7 @@ class CastingActors extends React.Component{
         }
     }
     componentDidMount() {
-        axios.get(`https://api.themoviedb.org/3/movie/${this.props.idFilm}/credits?api_key=1092ee57947c8bdfc25a5a0641ecb8ec`)
+        axios.get(`https://api.themoviedb.org/3/movie/${this.props.idFilm}/credits?api_key=a8a3380a564299f359c18e52aaa5bc79`)
         .then(res => {
             this.setState({
             cast: res.data.cast
