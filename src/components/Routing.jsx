@@ -20,7 +20,7 @@ function Routing({ location }) {
                 <Route exact path="/" component={HomePage} />
                 <Route path="/fiche/:ficheNumber(\d+)" component={Fiche} />
                 <Route path="/casting/:castingNumber(\d+)" component={Casting} />
-                <Route path="/casting/:Gallery(\d+)" component={Gallery} />
+                <Route path="/gallery/:galleryName" component={Gallery} />
               </Switch>
             </section>
             </CSSTransition>

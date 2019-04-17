@@ -1,23 +1,34 @@
-import React from 'react';
+import React , {Component} from 'react';
 import Data from "./Data";
+import Movie from "./Movie"
 
-
-class Data extends Component {
+class Gallery extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        Data:[]      
+        movies:[]      
     };
   }
   componentDidMount() {
     this.getData();
   }
   getData() {    
-    fetch(this.props.url)
-      .then(response  =>  response.json())
-      .then(data  => {           
-          this.setState({            
-          movies : data.results
+    const galleryName = this.props.match.params.galleryName;
+ 
+    
+    const filteredGalleries = Data.filter((gallery)=>{
+        if(gallery.type === galleryName) {
+            return true;
+        }
+        return false;
+    });
+    const url = filteredGalleries[0].url;
+
+    fetch(url)
+    .then(response  =>  response.json())
+    .then(data  => {           
+        this.setState({            
+        movies : data.results
         });
     });    
   }
@@ -31,7 +42,8 @@ class Data extends Component {
           <Movie
             key={idx}
             cle={film.id}
-            image = {"https://image.tmdb.org/t/p/w500" + film.poster_path  }              
+            image = {"https://image.tmdb.org/t/p/w500" + film.poster_path}
+            genres={film.genre_ids}              
           />
         );        
       })}      
@@ -40,4 +52,4 @@ class Data extends Component {
     )
   }
 };
-export default Data;
+export default Gallery;
