@@ -12,7 +12,7 @@ const Data =[
   },
   {
     type: "Western",          
-    url : "https://api.themoviedb.org/3/discover/movie?api_key=1092ee57947c8bdfc25a5a0641ecb8ec&with_genres=37"     
+    url : "https://api.themoviedb.org/3/discover/movie?api_key=1092ee57947c8bdfc25a5a0641ecb8ec&with_genres=37&page="     
   },
   {
     type: "Drama",          
@@ -24,7 +24,7 @@ const Data =[
   },
   {
     type: "Science Fiction",          
-    url : "https://api.themoviedb.org/3/discover/movie?api_key=1092ee57947c8bdfc25a5a0641ecb8ec&with_genres=878"     
+    url : "https://api.themoviedb.org/3/discover/movie?api_key=1092ee57947c8bdfc25a5a0641ecb8ec&with_genres=878&page="     
   },
   {
     type: "Horror",          
@@ -32,7 +32,7 @@ const Data =[
   },
   {
     type: "Comedy",          
-    url : "https://api.themoviedb.org/3/discover/movie?api_key=1092ee57947c8bdfc25a5a0641ecb8ec&with_genres=35"     
+    url : "https://api.themoviedb.org/3/discover/movie?api_key=1092ee57947c8bdfc25a5a0641ecb8ec&with_genres=35&page="     
   },
   {
     type: "Animation",          
@@ -40,7 +40,7 @@ const Data =[
   },
   {
     type: "Documentary",          
-    url : "https://api.themoviedb.org/3/discover/movie?api_key=1092ee57947c8bdfc25a5a0641ecb8ec&with_genres=99&page=2"     
+    url : "https://api.themoviedb.org/3/discover/movie?api_key=1092ee57947c8bdfc25a5a0641ecb8ec&with_genres=99&page="     
   },
   {
     type: "War",          
