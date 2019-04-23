@@ -1,9 +1,5 @@
 
-@font-face {
-  font-family: 'Monoton';
-  src: url("./font/Monoton-Regular.ttf");
-  word-spacing: 3em;
-}
+
 .App { 
   text-align: left;
   background-color: black;
@@ -14,9 +10,6 @@
   overflow-x: scroll;
   overflow-y: hidden;
   height: 35vh;
-}
-.movieTitle {
-  color : red;
 }
 .img-card{
   height:30vh;
@@ -35,45 +28,16 @@ h1,h2,h3,h4, .categoriesName {
   word-spacing: 0.5em;
   margin-left: 10%;
   margin-right: 10%;
-  font-family: 'Monoton', cursive;
   color: #45D932 ;
 }
 
-.movie-synopsis {
-  text-align: left;
-}
-.movie-title{
-  text-align: left;
-  padding-bottom : 15px;  
-  font-family: 'Monoton', cursive;
-  color : 	#45D932 ; 
-}
-.movie-pic{
-  display: inline;
-}
-.movie-poster {
-  float: left;
-  height: 60vh;
-}
-.movie-profil{
-  width: 10%;
-  margin : 8px;
-}
-.movie-pic {
-  width: 50px;
-  }
-.movie-casting {
-  justify-content: center;
-}
-.movie-description{
-  text-align: center;
-}
 ul
  {
   list-style: none;
 }
+
 .logo {
-  width: 8em
+  width: 8em;
 }
 .pageFiche {
   display: flex;
@@ -83,6 +47,12 @@ ul
 }
 
 
+.flexisation{
+  display: inline-flex;
+  flex-wrap: wrap;  
+  justify-content: center;
+
+}
 /* routing */
 
 .fade-enter {
@@ -114,7 +84,10 @@ section.route-section {
   top: 0;
   left: 0;
   background-color: black;
+
+
 }
+
 .flexisation {
   display: inline-flex;
   flex-wrap: wrap;
@@ -127,4 +100,3 @@ section.route-section {
   margin: auto;
   justify-content: center
 }
-
