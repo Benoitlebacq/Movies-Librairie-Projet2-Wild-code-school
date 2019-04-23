@@ -103,11 +103,11 @@ class Fiche extends React.Component {
             <img src={"https://image.tmdb.org/t/p/w500" + this.state.fiche.backdrop_path} alt={this.state.fiche.original_title} />
             </div>
           </div>
-        </div>
-      
-         <div className="footer">
-         <Footer />
+        </div>      
+         
       </div>
     );
   }
 }
+
+export default Fiche;
