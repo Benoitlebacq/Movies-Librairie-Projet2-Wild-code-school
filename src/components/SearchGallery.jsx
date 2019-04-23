@@ -32,12 +32,14 @@ class SearchGallery extends Component {
         {
           this.state.movies.map((film, idx) => {
             return (
+              <div className="flexisation border-0 m-1 margeUp">
               <Movie
                 key={idx}
                 cle={film.id}
                 image = {"https://image.tmdb.org/t/p/w500" + film.poster_path}
                 genres={film.genre_ids}              
               />
+              </div>
             );        
           })
     

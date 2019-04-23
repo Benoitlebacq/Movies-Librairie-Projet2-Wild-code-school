@@ -30,6 +30,9 @@ h1,h2,h3,h4, .categoriesName {
   margin-right: 10%;
   color: #45D932 ;
 }
+.margeUp{
+  padding-top: 25px;
+}
 ul
  {
   list-style: none;
