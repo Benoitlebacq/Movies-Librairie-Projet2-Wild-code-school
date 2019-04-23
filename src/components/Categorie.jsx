@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Movie from "./Movie";
+import Movie2 from "./Movie2";
 import { NavLink } from 'react-router-dom';
 class Categorie extends Component {
   constructor(props) {
@@ -41,7 +41,7 @@ class Categorie extends Component {
     <div className = "containing">   
         {this.state.movies.map((film, idx) => {
         return (
-          <Movie
+          <Movie2
             key={idx}
             cle={film.id}
             image = {"https://image.tmdb.org/t/p/w500" + film.poster_path}              
