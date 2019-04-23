@@ -1,7 +1,7 @@
 import React, { Component , Fragment } from 'react';
 import './App.css';
 import './header.css';
-import {Dropdown, DropdownItem, DropdownToggle, DropdownMenu, InputGroup, InputGroupAddon, Input } from 'reactstrap';
+import {Dropdown, DropdownItem, DropdownToggle, DropdownMenu, InputGroup, InputGroupAddon, Input, Button,Modal } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import { Link } from "react-router-dom"; 
 import { BrowserRouter as Router } from "react-router-dom";
@@ -13,15 +13,23 @@ class App extends Component {
   constructor(props) {
     super(props);
 
+
     this.toggle = this.toggle.bind(this);
     this.state = {
       dropdownOpen: false,
 
-      search :""
+      search :"",
+      show: false,
+
+
     };
     this.onChange = this.onChange.bind(this);
 
     this.console = this.console.bind(this);
+
+
+    this.handleShow = this.handleShow.bind(this);
+    this.handleClose = this.handleClose.bind(this);
   }
 
   onChange(e) {
@@ -40,6 +48,17 @@ class App extends Component {
       dropdownOpen: !this.state.dropdownOpen,
     });
   }
+
+
+  handleClose() {
+    this.setState({ show: false });
+  }
+
+  handleShow() {
+    this.setState({ show: true });
+  }
+
+console.log({this.state.show})
   render() {
     return (
       <Router>
@@ -73,7 +92,25 @@ class App extends Component {
                     <DropdownItem >To see later</DropdownItem>
                     <DropdownItem>Others lists</DropdownItem>
                     <DropdownItem divider />
-                    <DropdownItem id="addlist" onSelect={alert('test ok !')} >+ Add liste</DropdownItem>
+                    <Button variant="primary" onClick={this.handleShow}>
+                        <DropdownItem id="addlist">+ Add liste</DropdownItem>
+                    </Button>
+
+                    <Modal show={this.state.show} onHide={this.handleClose}>
+    <Modal.Header closeButton>
+      <Modal.Title>Modal heading</Modal.Title>
+    </Modal.Header>
+    <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+    <Modal.Footer>
+      <Button variant="secondary" onClick={this.handleClose}>
+        Close
+      </Button>
+      <Button variant="primary" onClick={this.handleClose}>
+        Save Changes
+      </Button>
+    </Modal.Footer>
+  </Modal>
+
                   </DropdownMenu>
                 </Dropdown>
               </li>
