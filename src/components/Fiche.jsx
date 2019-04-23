@@ -66,34 +66,34 @@ class Fiche extends React.Component {
             </div>
             <div className="movie-genre">
               <ul>
-                {this.state.genres === undefined ? ' ' : this.state.genres.map((genre) => {
-                  return <li>{genre.name}</li>
+              <h4>Genres </h4>{this.state.genres === undefined ? ' ' : this.state.genres.map((genre) => {
+                  return `${genre.name}, `
                 }
                 )
                 }
               </ul>
             </div>
             <div className="movie-casting">
-              <h4>Casting :</h4>
+              <h4>Casting</h4>
               <div className="ul-actors-pics">
                 <CastingActors idFilm={this.props.match.params.ficheNumber} />
               </div>
             </div>
             <div className="movie-director">
               <div className="infos-casting">
-                <h4>Director :</h4>
+                <h4>Director</h4>
                 <ul>
                   <CastDirector idFilm={this.props.match.params.ficheNumber} />
                 </ul>
               </div>
               <div className="movie-casttech">
-                <h4>Production :</h4>
+                <h4>Production</h4>
                 <ul>
                   <CastTech idFilm={this.props.match.params.ficheNumber} />
                 </ul>
               </div>
               <div className="movie-music">
-                <h4>Music :</h4>
+                <h4>Music</h4>
                 <ul>
                   <CastMusic idFilm={this.props.match.params.ficheNumber} />
                 </ul>
