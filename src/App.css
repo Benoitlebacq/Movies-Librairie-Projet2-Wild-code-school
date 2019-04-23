@@ -1,9 +1,5 @@
 
-@font-face {
-  font-family: 'Monoton';
-  src: url("./font/Monoton-Regular.ttf");
-  word-spacing: 3em;
-}
+
 .App { 
   text-align: left;
   background-color: black;
@@ -32,7 +28,6 @@ h1,h2,h3,h4, .categoriesName {
   word-spacing: 0.5em;
   margin-left: 10%;
   margin-right: 10%;
-  font-family: 'Monoton', cursive;
   color: #45D932 ;
 }
 ul
