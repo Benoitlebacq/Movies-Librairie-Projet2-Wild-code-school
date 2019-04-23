@@ -15,9 +15,6 @@
   overflow-y: hidden;
   height: 35vh;
 }
-.movieTitle {
-  color : red;
-}
 .img-card{
   height:30vh;
 }
@@ -38,40 +35,11 @@ h1,h2,h3,h4, .categoriesName {
   font-family: 'Monoton', cursive;
   color: #45D932 ;
 }
-
-.movie-synopsis {
-  text-align: left;
-}
-.movie-title{
-  text-align: left;
-  padding-bottom : 15px;  
-  font-family: 'Monoton', cursive;
-  color : 	#45D932 ; 
-}
-.movie-pic{
-  display: inline;
-}
-.movie-poster {
-  float: left;
-  height: 60vh;
-}
-.movie-profil{
-  width: 10%;
-  margin : 8px;
-}
-.movie-pic {
-  width: 50px;
-  }
-.movie-casting {
-  justify-content: center;
-}
-.movie-description{
-  text-align: center;
-}
 ul
  {
   list-style: none;
 }
+
 .logo {
   width: 8em;
 }
@@ -121,4 +89,3 @@ section.route-section {
   margin: auto;
   justify-content: center
 }
-
