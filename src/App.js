@@ -20,8 +20,7 @@ class App extends Component {
     this.onChange = this.onChange.bind(this);
     this.console = this.console.bind(this);
 
-    this.handleShow = this.handleShow.bind(this);
-    this.handleClose = this.handleClose.bind(this);
+    this.handleToogle = this.handleToogle.bind(this);
   }
 
   onChange(e) {
@@ -32,7 +31,6 @@ class App extends Component {
 
   console(e) {
     console.log(this.state.search)
-
   }
 
   toggle() {
@@ -41,13 +39,10 @@ class App extends Component {
     });
   }
 
-
-  handleClose() {
-    this.setState({ show: false });
-  }
-
-  handleShow() {
-    this.setState({ show: true });
+  handleToogle() {
+    this.setState(PrevState => ({
+      show : !PrevState.show
+    }))
   }
 
   render() {
@@ -86,7 +81,7 @@ class App extends Component {
                         <DropdownItem divider />
                           <DropdownItem id="addlist">
                           </DropdownItem>
-                          <Button variant="primary" onClick={this.handleShow}>
+                          <Button variant="primary" onClick={this.handleToogle}>
                           + Add liste
                          </Button>
                         <ModalCreatList show={this.state.show} />
