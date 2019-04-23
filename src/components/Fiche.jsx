@@ -104,7 +104,9 @@ class Fiche extends React.Component {
             </div>
           </div>
         </div>      
-         
+         <div className="Footer">
+         <Footer />
+         </div>
       </div>
     );
   }
