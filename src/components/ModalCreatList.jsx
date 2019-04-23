@@ -3,9 +3,10 @@ import { Button, Modal, ModalHeader,ModalBody,ModalFooter } from 'reactstrap';
 
 class ModalCreatList extends React.Component {
     render() {
+        console.log('this.state.show in ModalCreatList => ' + this.props.show);
         return (
             <React.Fragment>
-                <Modal show={this.props.show} onHide={this.handleClose}>
+                <Modal isOpen={this.props.show} onHide={this.handleClose}>
                     <ModalHeader closeButton>
                     </ModalHeader>
                     <ModalBody>Woohoo, you're reading this text in a modal!</ModalBody>
@@ -15,7 +16,7 @@ class ModalCreatList extends React.Component {
                         </Button>
                         <Button variant="primary" onClick={this.handleClose}>
                             Save Changes
-                        </Button> 
+                        </Button>
                     </ModalFooter>
                 </Modal>
             </React.Fragment>

@@ -7,11 +7,9 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Routing from "./components/Routing";
 import ModalCreatList from './components/ModalCreatList';
 
-
 class App extends Component {
   constructor(props) {
     super(props);
-
 
     this.toggle = this.toggle.bind(this);
     this.state = {
@@ -21,7 +19,6 @@ class App extends Component {
     };
     this.onChange = this.onChange.bind(this);
     this.console = this.console.bind(this);
-
 
     this.handleShow = this.handleShow.bind(this);
     this.handleClose = this.handleClose.bind(this);
@@ -88,15 +85,13 @@ class App extends Component {
                         <DropdownItem>Others lists</DropdownItem>
                         <DropdownItem divider />
                           <DropdownItem id="addlist">
-
                           </DropdownItem>
+                          <Button variant="primary" onClick={this.handleShow}>
+                          + Add liste
+                         </Button>
                         <ModalCreatList show={this.state.show} />
                       </DropdownMenu>
                     </Dropdown>
-
-                    <Button variant="primary" onClick={this.handleShow}>
-                          + Add liste
-                    </Button>
                   </li>
                 </ul>
               </nav>
