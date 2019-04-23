@@ -1,7 +1,6 @@
 import React from "react";
 import axios from 'axios';
 import RoleList from "./RoleList"
-
 class Casting extends  React.Component {
     constructor(props) {
         super(props);
@@ -25,7 +24,9 @@ class Casting extends  React.Component {
             this.state.movieList.filter((movie)=>{
                 return movie.original_title
             }).map((role)=>{
+
                 return <div className="flexisation">
+
                 <RoleList
                 moviePlayed = {role.original_title}
                 idMovie = {role.id}

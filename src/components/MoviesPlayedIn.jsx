@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";  
 import axios from "axios";
-
 class MoviePlayedIn extends React.Component {
     constructor(props) {
         super(props);
@@ -13,7 +12,7 @@ class MoviePlayedIn extends React.Component {
       this.getMovie();
     }
     getMovie() {    
-      axios.get(`https://api.themoviedb.org/3/movie/${this.props.cle}?api_key=a8a3380a564299f359c18e52aaa5bc79`)
+      axios.get(`https://api.themoviedb.org/3/movie/${this.props.cle}?api_key=ff37a1a34cd2beecb41b30cbfda1916b`)
         .then(response  =>  {           
            this.setState({            
             movies : response.data            
@@ -29,9 +28,7 @@ class MoviePlayedIn extends React.Component {
               isLoaded()
               ?<Link  to={`/fiche/${this.props.cle}`}><img src ={`https://image.tmdb.org/t/p/w500${this.state.movies.poster_path}`} alt="" className="img-card-actor-movies"/></Link>
               :<p>Loading...</p>
-
-            } 
-            
+            }             
           </div>
       </div>
     );

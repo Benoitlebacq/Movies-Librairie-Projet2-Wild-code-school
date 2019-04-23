@@ -20,7 +20,7 @@ class CastTech extends React.Component{
          this.state.crew.filter((member,i)=>{
              return member.job.includes('Producer');
          }).map((casting) => {
-              return <li>{casting.job} : {casting.name}</li>
+              return <li><span>{casting.job} :</span> {casting.name}</li>
             }
             )
         )}

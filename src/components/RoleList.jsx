@@ -1,6 +1,5 @@
 import React from "react";
 import MoviePlayedIn from "./MoviesPlayedIn";
-
 class RoleList extends React.Component{
     constructor(props){
         super(props);
