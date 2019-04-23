@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Movie from "./Movie";
+import { NavLink } from 'react-router-dom';
 class Categorie extends Component {
   constructor(props) {
     super(props);
@@ -15,24 +16,27 @@ class Categorie extends Component {
     const baseUrl = this.props.url  ;
     fetch(baseUrl + this.state.page)
       .then(response  =>  response.json())
-      .then(data  => {           
-          this.setState({            
-          movies : data.results
+      .then(data  => {   
+        let newList = [...this.state.movies, ...data.results];
+        this.setState({            
+          movies : newList
         });
     });    
   }
   upPageNumber =() => {
     this.setState({
       page : this.state.page +1, 
+    }, ()=>{
+      this.getMovie();
     });
-    console.log(this.state.page);
-    this.getMovie();
   }
 
   render() {
     return (
     <div className = "mt-5">
+    <NavLink activeClassName="active" exact to={`/gallery/${this.props.type}`}>
     <h2 className="categoriesName ml-3">{this.props.type}</h2>
+    </NavLink>
     <button onClick={()=> {this.upPageNumber()}}>up page</button>
     <div className = "containing">   
         {this.state.movies.map((film, idx) => {

@@ -1,15 +1,9 @@
-import React, { Component , Fragment } from 'react';
-import './App.css';
-import './header.css';
+import React, { Fragment } from "react";
 import {Dropdown, DropdownItem, DropdownToggle, DropdownMenu, InputGroup, InputGroupAddon, Input } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
+import '../App.css';
 import { Link } from "react-router-dom"; 
-import { BrowserRouter as Router } from "react-router-dom";
-import Routing from "./components/Routing";
-
-
-
-class App extends Component {
+class Header extends React.Component {
   constructor(props) {
     super(props);
 
@@ -42,18 +36,17 @@ class App extends Component {
   }
   render() {
     return (
-      <Router>
-        <div className="App">
-        <Fragment>
+      <Fragment>
         <div className="menu">
           <nav className="navbar navbar-expand-xl navbar-light">
             <ul>
               <li><NavLink activeClassName="active" exact to="/">
                 <img className="logo" src="https://image.noelshack.com/fichiers/2019/15/5/1555076151-screenshot-from-2019-04-12-11-21-07-convertimage-1.png" />
-                </NavLink></li>
+                </NavLink>
+              </li>
            </ul>
             <ul className="navbar-nav mx-auto">
-            <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Science Fiction">Science Fiction</NavLink></li>
+              <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Science Fiction">Science Fiction</NavLink></li>
               <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Western">Westerns</NavLink></li>
               <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Drama">Drama</NavLink></li>
               <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Comedy">Comedy</NavLink></li>
@@ -87,17 +80,14 @@ class App extends Component {
              value={this.state.search}
              onChange={this.onChange}
             />
-            <Link  to={`/searchgallery/${this.state.search}`}>
+            <Link  to={`/`}>
             <button
             onClick= {this.console}
             >Search</button></Link>
           </InputGroup>
         </div>
       </Fragment>
-          <Routing/>
-        </div>
-      </Router>
     );
   }
 }
-export default App;
+export default Header;
