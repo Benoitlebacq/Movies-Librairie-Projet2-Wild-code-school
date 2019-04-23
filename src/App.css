@@ -3,6 +3,7 @@
 .App { 
   text-align: left;
   background-color: black;
+  height: 100vh;
   color : white;
 }
 .containing {
