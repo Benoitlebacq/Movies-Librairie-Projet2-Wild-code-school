@@ -54,20 +54,21 @@ class App extends Component {
                 </ul>
                 <ul className="navbar-nav mx-auto">
                   
-                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Adventure">Adventure</NavLink></li>
-                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Science Fiction">Science Fiction</NavLink></li>
-                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Action">Action</NavLink></li>
-                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Crimes">Crimes</NavLink></li>
-                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Western">Westerns</NavLink></li>
-                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Drama">Drama</NavLink></li>
-                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Comedy">Comedy</NavLink></li>
-                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Thriller">Thriller</NavLink></li>
-                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Horror">Horror</NavLink></li>
-                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Animation">Animation</NavLink></li>
-                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Documentary">Documentary</NavLink></li>
-                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/War">War</NavLink></li>
-                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/History">History</NavLink></li>
-                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Romance">Romance</NavLink></li>
+                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Adventure/12">Adventure</NavLink></li>
+                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Science Fiction/878">Science Fiction</NavLink></li>
+                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Action/28">Action</NavLink></li>
+                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Crimes/80">Crimes</NavLink></li>
+                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Western/37">Westerns</NavLink></li>
+                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Drama/18">Drama</NavLink></li>
+                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Comedy/35">Comedy</NavLink></li>
+                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Thriller/53">Thriller</NavLink></li>
+                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Horror/27">Horror</NavLink></li>
+                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Animation/16">Animation</NavLink></li>
+                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Documentary/99">Documentary</NavLink></li>
+                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/War/10752">War</NavLink></li>
+                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/History/36">History</NavLink></li>
+                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Romance/10749">Romance</NavLink></li>
+                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Music/10402">Music</NavLink></li>
                   <li className="nav-item">
                     <Dropdown nav isOpen={this.state.dropdownOpen} toggle={this.toggle}>
                       <DropdownToggle nav caret>

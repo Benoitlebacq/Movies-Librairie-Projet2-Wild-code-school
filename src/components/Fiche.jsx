@@ -67,8 +67,8 @@ class Fiche extends React.Component {
             </div>
             <div className="movie-genre">
               <ul>
-              <h4>Genres </h4>{this.state.genres === undefined ? ' ' : this.state.genres.map((genre) => {
-                  return <NavLink activeClassName="active" className="textdeco" exact to={`/gallery/${genre.name}`}>{genre.name},</NavLink>
+              <h4>Genres </h4>{this.state.genres === undefined ? ' ' : this.state.genres.map((genre) => {                
+                  return <NavLink activeClassName="active" className="textdeco" exact to={`/gallery/${genre.name}/${genre.id}`}>{genre.name} </NavLink>
                 }
                 )
                 }

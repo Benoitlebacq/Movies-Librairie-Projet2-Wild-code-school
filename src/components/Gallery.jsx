@@ -6,14 +6,35 @@ class Gallery extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        movies:[]      
+        movies:[] ,
+        page : 1      
     };
   }
   componentDidMount() {
     this.getData();
   }
-  getData() {    
-    const galleryName = this.props.match.params.galleryName;
+  getData() {  
+    
+    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=1092ee57947c8bdfc25a5a0641ecb8ec&with_genres=${this.props.match.params.id}&page=${this.state.page}`)
+      .then(response  =>  response.json())
+      .then(data  => {   
+        let newList = [...this.state.movies, ...data.results];
+        this.setState({            
+          movies : newList
+        });
+    });    
+  }
+
+  upPageNumber =() => {
+    this.setState({
+      page : this.state.page +1, 
+    }, ()=>{
+      this.getData();
+    });
+  }
+    /*const galleryName = this.props.match.params.galleryName;
+    const galleryId = this.props.match.params.id
+    console.log(galleryId);
     
 
     const filteredGalleries = Data.filter((gallery)=>{
@@ -30,12 +51,13 @@ class Gallery extends Component {
         this.setState({            
         movies : data.results
         });
-    });    
-  }
+    });  */  
+  
   render() {
     return (
     <div className = "row">
     <h2 className="title-cat">{this.props.match.params.galleryName}</h2>
+    <button onClick={()=> {this.upPageNumber()}}>up page</button>
     <div className = "gallery-type">   
         {this.state.movies.map((film, idx) => {
         return (
