@@ -121,4 +121,10 @@ section.route-section {
   margin: auto;
   justify-content: center
 }
+.gallery-type{
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: center
+}
 
