@@ -11,6 +11,7 @@
   overflow-y: hidden;
   height: 35vh;
 }
+
 .img-card{
   height:30vh;
 }
@@ -20,7 +21,7 @@
 .categoriesName {
   font-family: 'Anton', sans-serif;
 }
-.img-card:hover {
+.effect:hover {
   height: 35vh;;
 }
 h1,h2,h3,h4, .categoriesName {

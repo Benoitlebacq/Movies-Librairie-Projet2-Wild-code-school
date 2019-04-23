@@ -28,11 +28,11 @@ class SearchGallery extends Component {
   return (
     
   
-    <div>   
+    <div className="mt-5">   
         {
           this.state.movies.map((film, idx) => {
             return (
-              <div className="flexisation border-0 m-1">
+              <div className="flexisation border-0 m-1 ">
               <Movie
                 key={idx}
                 cle={film.id}
