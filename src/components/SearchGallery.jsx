@@ -1,5 +1,4 @@
 import React , {Component} from 'react';
-import Data from "./Data";
 import Movie from "./Movie"
 const axios = require('axios');
 

@@ -1,12 +1,11 @@
-import React, { Component , Fragment } from 'react';
+import React, { Component, Fragment } from 'react';
 import './App.css';
 import './header.css';
-import {Dropdown, DropdownItem, DropdownToggle, DropdownMenu, InputGroup, InputGroupAddon, Input, Button,Modal } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
-import { Link } from "react-router-dom"; 
+import { Dropdown, DropdownItem, DropdownToggle, DropdownMenu, InputGroup, InputGroupAddon, Input, Button } from 'reactstrap';
+import { NavLink, Link } from 'react-router-dom';
 import { BrowserRouter as Router } from "react-router-dom";
 import Routing from "./components/Routing";
-
+import ModalCreatList from './components/ModalCreatList';
 
 
 class App extends Component {
@@ -17,14 +16,10 @@ class App extends Component {
     this.toggle = this.toggle.bind(this);
     this.state = {
       dropdownOpen: false,
-
-      search :"",
+      search: "",
       show: false,
-
-
     };
     this.onChange = this.onChange.bind(this);
-
     this.console = this.console.bind(this);
 
 
@@ -38,7 +33,7 @@ class App extends Component {
     });
   }
 
-  console(e){
+  console(e) {
     console.log(this.state.search)
 
   }
@@ -58,80 +53,69 @@ class App extends Component {
     this.setState({ show: true });
   }
 
-console.log({this.state.show})
   render() {
+    console.log('this.state.show => ' + this.state.show);
     return (
       <Router>
         <div className="App">
-        <Fragment>
-        <div className="menu">
-          <nav className="navbar navbar-expand-xl navbar-light">
-            <ul>
-              <li><NavLink activeClassName="active" exact to="/">
-                <img className="logo" src="https://image.noelshack.com/fichiers/2019/15/5/1555076151-screenshot-from-2019-04-12-11-21-07-convertimage-1.png" />
-                </NavLink></li>
-           </ul>
-            <ul className="navbar-nav mx-auto">
-            <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Science Fiction">Science Fiction</NavLink></li>
-              <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Western">Westerns</NavLink></li>
-              <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Drama">Drama</NavLink></li>
-              <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Comedy">Comedy</NavLink></li>
-              <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Thriller">Thriller</NavLink></li>
-              <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Horror">Horror</NavLink></li>
-              <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Animation">Animation</NavLink></li>
-              <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Documentary">Documentary</NavLink></li>
-              <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/War">War</NavLink></li>
-              <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/History">History</NavLink></li>
-              <li className="nav-item">
-                <Dropdown nav isOpen={this.state.dropdownOpen} toggle={this.toggle}>
-                  <DropdownToggle nav caret>
-                    Listes
+          <Fragment>
+            <div className="menu">
+              <nav className="navbar navbar-expand-xl navbar-light">
+                <ul>
+                  <li><NavLink activeClassName="active" exact to="/">
+                    <img className="logo" src="https://image.noelshack.com/fichiers/2019/15/5/1555076151-screenshot-from-2019-04-12-11-21-07-convertimage-1.png" alt="logo" />
+                  </NavLink></li>
+                </ul>
+                <ul className="navbar-nav mx-auto">
+                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Science Fiction">Science Fiction</NavLink></li>
+                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Western">Westerns</NavLink></li>
+                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Drama">Drama</NavLink></li>
+                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Comedy">Comedy</NavLink></li>
+                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Thriller">Thriller</NavLink></li>
+                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Horror">Horror</NavLink></li>
+                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Animation">Animation</NavLink></li>
+                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Documentary">Documentary</NavLink></li>
+                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/War">War</NavLink></li>
+                  <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/History">History</NavLink></li>
+                  <li className="nav-item">
+                    <Dropdown nav isOpen={this.state.dropdownOpen} toggle={this.toggle}>
+                      <DropdownToggle nav caret>
+                        Listes
                 </DropdownToggle>
-                  <DropdownMenu>
-                    <DropdownItem>My favorites</DropdownItem>
-                    <DropdownItem >To see later</DropdownItem>
-                    <DropdownItem>Others lists</DropdownItem>
-                    <DropdownItem divider />
+                      <DropdownMenu>
+                        <DropdownItem>My favorites</DropdownItem>
+                        <DropdownItem >To see later</DropdownItem>
+                        <DropdownItem>Others lists</DropdownItem>
+                        <DropdownItem divider />
+                          <DropdownItem id="addlist">
+
+                          </DropdownItem>
+                        <ModalCreatList show={this.state.show} />
+                      </DropdownMenu>
+                    </Dropdown>
+
                     <Button variant="primary" onClick={this.handleShow}>
-                        <DropdownItem id="addlist">+ Add liste</DropdownItem>
+                          + Add liste
                     </Button>
-
-                    <Modal show={this.state.show} onHide={this.handleClose}>
-    <Modal.Header closeButton>
-      <Modal.Title>Modal heading</Modal.Title>
-    </Modal.Header>
-    <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-    <Modal.Footer>
-      <Button variant="secondary" onClick={this.handleClose}>
-        Close
-      </Button>
-      <Button variant="primary" onClick={this.handleClose}>
-        Save Changes
-      </Button>
-    </Modal.Footer>
-  </Modal>
-
-                  </DropdownMenu>
-                </Dropdown>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div className="recherche">
-          <InputGroup>
-            <InputGroupAddon addonType="prepend"></InputGroupAddon>
-            <Input placeholder="Rechercher un film" 
-             value={this.state.search}
-             onChange={this.onChange}
-            />
-            <Link  to={`/searchgallery/${this.state.search}`}>
-            <button
-            onClick= {this.console}
-            >Search</button></Link>
-          </InputGroup>
-        </div>
-      </Fragment>
-          <Routing/>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div className="recherche">
+              <InputGroup>
+                <InputGroupAddon addonType="prepend"></InputGroupAddon>
+                <Input placeholder="Rechercher un film"
+                  value={this.state.search}
+                  onChange={this.onChange}
+                />
+                <Link to={`/searchgallery/${this.state.search}`}>
+                  <button
+                    onClick={this.console}
+                  >Search</button></Link>
+              </InputGroup>
+            </div>
+          </Fragment>
+          <Routing />
         </div>
       </Router>
     );

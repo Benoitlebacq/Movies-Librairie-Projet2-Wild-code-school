@@ -10,11 +10,11 @@ class Header extends React.Component {
     this.toggle = this.toggle.bind(this);
     this.state = {
       dropdownOpen: false,
+      show : false,
 
       search :""
     };
     this.onChange = this.onChange.bind(this);
-
     this.console = this.console.bind(this);
   }
 
