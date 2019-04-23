@@ -42,7 +42,8 @@ class Header extends React.Component {
             <ul>
               <li><NavLink activeClassName="active" exact to="/">
                 <img className="logo" src="https://image.noelshack.com/fichiers/2019/15/5/1555076151-screenshot-from-2019-04-12-11-21-07-convertimage-1.png" />
-                </NavLink></li>
+                </NavLink>
+              </li>
            </ul>
             <ul className="navbar-nav mx-auto">
               <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Science Fiction">Science Fiction</NavLink></li>
