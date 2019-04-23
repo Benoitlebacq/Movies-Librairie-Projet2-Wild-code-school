@@ -7,11 +7,11 @@ const Data =[
   {
     type: "Top rated",          
     url : "https://api.themoviedb.org/3/movie/top_rated?api_key=1092ee57947c8bdfc25a5a0641ecb8ec&page=" ,
-    id : 11     
+    id : 0     
   },
   {type: "Upcoming",          
     url : "https://api.themoviedb.org/3/movie/upcoming?api_key=a8a3380a564299f359c18e52aaa5bc79&page=" ,
-    id : 7   
+    id : 0   
   },
   {
     type: "Western",          
