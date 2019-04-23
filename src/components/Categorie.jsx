@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Movie from "./Movie";
+import { NavLink } from 'react-router-dom';
 class Categorie extends Component {
   constructor(props) {
     super(props);
@@ -33,7 +34,9 @@ class Categorie extends Component {
   render() {
     return (
     <div className = "mt-5">
+    <NavLink activeClassName="active" exact to={`/gallery/${this.props.type}`}>
     <h2 className="categoriesName ml-3">{this.props.type}</h2>
+    </NavLink>
     <button onClick={()=> {this.upPageNumber()}}>up page</button>
     <div className = "containing">   
         {this.state.movies.map((film, idx) => {
