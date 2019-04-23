@@ -51,6 +51,12 @@ ul
 }
 
 
+.flexisation{
+  display: inline-flex;
+  flex-wrap: wrap;  
+  justify-content: center;
+
+
 /* routing */
 
 .fade-enter {
@@ -82,10 +88,8 @@ section.route-section {
   top: 0;
   left: 0;
   background-color: black;
+
+
 }
-.flexisation {
-  display: inline-flex;
-  flex-wrap: wrap;
-  margin: auto;
-  justify-content: center
-}
+
+
