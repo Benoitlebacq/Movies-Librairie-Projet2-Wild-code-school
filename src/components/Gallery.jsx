@@ -14,8 +14,25 @@ class Gallery extends Component {
     this.getData();
   }
   getData() {  
-    
-    fetch(`https://api.themoviedb.org/3/discover/movie?api_key=1092ee57947c8bdfc25a5a0641ecb8ec&with_genres=${this.props.match.params.id}&page=${this.state.page}`)
+    if (this.props.match.params.id === '0') {
+      const filteredData = Data.filter((gallery)=>{
+        if (gallery.type === this.props.match.params.galleryName){
+          return true;
+        }
+        return false;
+      })
+      const url = filteredData[0].url
+      fetch(url)
+        .then(response => response.json())
+        .then(data => {
+          let newList = [...this.state.movies, ...data.results];
+        this.setState({            
+          movies : newList
+          });
+        });
+    }
+    else {
+      fetch(`https://api.themoviedb.org/3/discover/movie?api_key=1092ee57947c8bdfc25a5a0641ecb8ec&with_genres=${this.props.match.params.id}&page=${this.state.page}`)
       .then(response  =>  response.json())
       .then(data  => {   
         let newList = [...this.state.movies, ...data.results];
@@ -24,6 +41,7 @@ class Gallery extends Component {
         });
     });    
   }
+    }    
 
   upPageNumber =() => {
     this.setState({
@@ -32,27 +50,6 @@ class Gallery extends Component {
       this.getData();
     });
   }
-    /*const galleryName = this.props.match.params.galleryName;
-    const galleryId = this.props.match.params.id
-    console.log(galleryId);
-    
-
-    const filteredGalleries = Data.filter((gallery)=>{
-        if(gallery.type === galleryName) {
-            return true;
-        }
-        return false;
-    });
-    const url = filteredGalleries[0].url;
-
-    fetch(url)
-    .then(response  =>  response.json())
-    .then(data  => {           
-        this.setState({            
-        movies : data.results
-        });
-    });  */  
-  
   render() {
     return (
     <div className = "row">
