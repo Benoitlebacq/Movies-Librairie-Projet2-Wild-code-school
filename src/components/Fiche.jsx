@@ -6,6 +6,8 @@ import CastTech from "./CastTech";
 import CastMusic from "./CastMusic";
 import CastDirector from "./CastDirector";
 import '../Fiche.css';
+import Footer from "./Footer";
+
 
 class Fiche extends React.Component {
   constructor(props) {
@@ -102,9 +104,10 @@ class Fiche extends React.Component {
             </div>
           </div>
         </div>
+      
+         <div className="footer">
+         <Footer />
       </div>
     );
   }
 }
-
-export default Fiche;
