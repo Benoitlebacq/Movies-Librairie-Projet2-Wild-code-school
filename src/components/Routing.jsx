@@ -4,6 +4,7 @@ import HomePage from "./HomePage"
 import Fiche from "./Fiche"
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import Casting from "./Casting"
+import Gallery from "./Gallery"
 
 function Routing({ location }) {
     return (
@@ -19,6 +20,7 @@ function Routing({ location }) {
                 <Route exact path="/" component={HomePage} />
                 <Route path="/fiche/:ficheNumber(\d+)" component={Fiche} />
                 <Route path="/casting/:castingNumber(\d+)" component={Casting} />
+                <Route path="/gallery/:galleryName" component={Gallery} />
               </Switch>
             </section>
             </CSSTransition>
