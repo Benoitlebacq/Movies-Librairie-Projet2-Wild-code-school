@@ -39,6 +39,10 @@ const Data =[
     url : "https://api.themoviedb.org/3/discover/movie?api_key=1092ee57947c8bdfc25a5a0641ecb8ec&with_genres=16&page="     
   },
   {
+    type: "Adventure",          
+    url : "https://api.themoviedb.org/3/discover/movie?api_key=1092ee57947c8bdfc25a5a0641ecb8ec&with_genres=12&page="     
+  },
+  {
     type: "Documentary",          
     url : "https://api.themoviedb.org/3/discover/movie?api_key=1092ee57947c8bdfc25a5a0641ecb8ec&with_genres=99&page="     
   },
@@ -61,6 +65,14 @@ const Data =[
   {
     type: "Best of French language",          
     url : "https://api.themoviedb.org/3/discover/movie?api_key=1092ee57947c8bdfc25a5a0641ecb8ec&with_original_language=fr&page="     
+  },
+  {
+    type: "Crimes",          
+    url : "https://api.themoviedb.org/3/discover/movie?api_key=1092ee57947c8bdfc25a5a0641ecb8ec&with_genres=80&page="     
+  },
+  {
+    type: "Romance",          
+    url : "https://api.themoviedb.org/3/discover/movie?api_key=1092ee57947c8bdfc25a5a0641ecb8ec&with_genres=10749&page="     
   }
 ]
   export default Data;
