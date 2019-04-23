@@ -73,7 +73,7 @@ class App extends Component {
                     <DropdownItem >To see later</DropdownItem>
                     <DropdownItem>Others lists</DropdownItem>
                     <DropdownItem divider />
-                    <DropdownItem>+ Add liste</DropdownItem>
+                    <DropdownItem id="addlist" onSelect={alert('test ok !')} >+ Add liste</DropdownItem>
                   </DropdownMenu>
                 </Dropdown>
               </li>
