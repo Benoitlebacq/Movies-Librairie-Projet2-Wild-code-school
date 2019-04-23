@@ -20,6 +20,7 @@ class HomePage extends React.Component {
             key = {item.type}
             type = {item.type}
             url = {item.url}
+            id = {item.id}
           >
           </Categorie>
           )

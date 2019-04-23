@@ -22,7 +22,7 @@ function Routing({ location }) {
                 <Route exact path="/" component={HomePage} />
                 <Route path="/fiche/:ficheNumber(\d+)" component={Fiche} />
                 <Route path="/casting/:castingNumber(\d+)" component={Casting} />
-                <Route path="/gallery/:galleryName" component={Gallery} />
+                <Route path="/gallery/:galleryName/:id(\d+)" component={Gallery} />
                 <Route path="/searchgallery/:search" component={SearchGallery} />
               </Switch>
             </section>

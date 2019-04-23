@@ -14,6 +14,8 @@ class Gallery extends Component {
   }
   getData() {    
     const galleryName = this.props.match.params.galleryName;
+    const galleryId = this.props.match.params.id
+    console.log(galleryId);
     
 
     const filteredGalleries = Data.filter((gallery)=>{
