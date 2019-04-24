@@ -22,23 +22,17 @@ class Gallery extends Component {
 
   getData() {  
     if (this.props.match.params.id === '0') {
-      const filteredData = Data.filter((gallery)=>{
-        
+      const filteredData = Data.filter((gallery)=>{        
         if (gallery.type === this.props.match.params.galleryName){
-          console.log("gallery type :  " + gallery.type)
-        console.log("this props :  " + this.props.match.params.galleryName)
-        
           return true;
         }
         return false;
-      })
-      console.log(filteredData[0])
+      })      
       const Theurl = filteredData[0].url
       fetch(Theurl+`${this.state.page}`)
         .then(response => response.json())
         .then(data => {
-          let newList = [...this.state.movies, ...data.results];
-          console.log(newList)
+          let newList = [...this.state.movies, ...data.results];          
         this.setState({            
           movies : newList
           });
