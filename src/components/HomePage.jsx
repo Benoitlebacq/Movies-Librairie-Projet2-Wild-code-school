@@ -13,21 +13,22 @@ class HomePage extends React.Component {
   render() {
     return (
       <div>
-        {this.state.Data.map((item)=> {
-          return(
-          <Categorie
-            
-            key = {item.type}
-            type = {item.type}
-            url = {item.url}
-          >
-          </Categorie>
+        {this.state.Data.map((item) => {
+          return (
+            <Categorie
+
+              key={item.type}
+              type={item.type}
+              url={item.url}
+              id={item.id}
+            >
+            </Categorie>
           )
-        })}   
+        })}
         <div className="footer">
           <Footer />
-        </div>      
-      </div>  
+        </div>
+      </div>
     );
   }
 }

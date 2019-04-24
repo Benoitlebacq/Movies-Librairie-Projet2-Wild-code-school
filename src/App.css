@@ -3,6 +3,7 @@
 .App { 
   text-align: left;
   background-color: black;
+  height: 100vh;
   color : white;
 }
 .containing {
@@ -11,25 +12,31 @@
   overflow-y: hidden;
   height: 35vh;
 }
+
 .img-card{
   height:30vh;
 }
-.img-card-actor-movies{
-  height:30vh;
-}
+
 .categoriesName {
   font-family: 'Anton', sans-serif;
 }
-.img-card:hover {
+.Categoname{
+  color:#45D932
+}
+.Categoname:hover{
+  color:#45D932
+}
+.effect:hover {
   height: 35vh;;
 }
 h1,h2,h3,h4, .categoriesName {
   width: 90%;
-  word-spacing: 0.5em;
   margin-left: 10%;
   margin-right: 10%;
   color: #45D932 ;
+ 
 }
+
 ul
  {
   list-style: none;
@@ -60,7 +67,7 @@ ul
 
 .fade-enter.fade-enter-active {
   opacity: 1;
-  transition: opacity 300ms ease-in;
+  transition: opacity 200ms ease-in;
 }
 
 .fade-exit {
@@ -83,8 +90,24 @@ section.route-section {
   top: 0;
   left: 0;
   background-color: black;
-
-
 }
 
+.flexisation {
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: center
+}
 
+.gallery-type{
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin: auto;
+  justify-content: center
+}
+
+.footer{
+  color: green;
+  text-align: center;
+  bottom: 0vh;
+}

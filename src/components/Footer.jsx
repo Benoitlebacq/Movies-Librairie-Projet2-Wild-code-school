@@ -5,7 +5,7 @@ class Footer extends React.Component {
   render() {
     return (
       <Fragment>
-          hoeifiojzgfhnzpgnpizrpùzhpgn
+        FOOTER
       </Fragment>
     );
   }

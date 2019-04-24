@@ -1,8 +1,8 @@
 import React from 'react';
 import axios from 'axios'
 
-class CastMusic extends React.Component{
-    constructor(props){
+class CastMusic extends React.Component {
+    constructor(props) {
         super(props);
         this.state = {
             crew: []
@@ -10,21 +10,22 @@ class CastMusic extends React.Component{
     }
     componentDidMount() {
         axios.get(`https://api.themoviedb.org/3/movie/ ${this.props.idFilm} /credits?api_key=a8a3380a564299f359c18e52aaa5bc79`)
-        .then(res => {         
-          this.setState({
-            crew: res.data.crew
-          });
-        });
+            .then(res => {
+                this.setState({
+                    crew: res.data.crew
+                });
+            });
     }
-    render(){
-        return(    
-         this.state.crew.filter((member,i)=>{
-             return member.job.includes('Music');
-         }).map((casting) => {
-              return <li><span>{casting.job} :</span> {casting.name}</li>
+    render() {
+        return (
+            this.state.crew.filter((member, i) => {
+                return member.job.includes('Music');
+            }).map((casting) => {
+                return <li><span>{casting.job} :</span> {casting.name}</li>
             }
             )
-        )}
-        
+        )
     }
+
+}
 export default CastMusic;

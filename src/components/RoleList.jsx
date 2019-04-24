@@ -1,17 +1,20 @@
 import React from "react";
 import MoviePlayedIn from "./MoviesPlayedIn";
-class RoleList extends React.Component{
-    constructor(props){
+class RoleList extends React.Component {
+    constructor(props) {
         super(props);
-    }   
-    render (){
+    }
+    render() {
         return (
-           <div className="flexisation">
-               <MoviePlayedIn 
-               cle = {this.props.idMovie}
-               key = {this.props.idMovie}
-               /> 
-            </div>               
+
+                    <div >
+                        <MoviePlayedIn
+                            cle={this.props.idMovie}
+                            key={this.props.idMovie}
+                        />
+                    </div>
+
         )
-    }}
+    }
+}
 export default RoleList;
