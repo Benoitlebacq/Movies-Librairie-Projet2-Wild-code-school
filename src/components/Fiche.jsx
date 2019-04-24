@@ -9,7 +9,6 @@ import '../Fiche.css';
 import Footer from "./Footer";
 import { NavLink } from 'react-router-dom';
 
-
 class Fiche extends React.Component {
   constructor(props) {
     super(props);
@@ -67,7 +66,7 @@ class Fiche extends React.Component {
             </div>
             <div className="movie-genre">
               <ul>
-              <h4>Genres </h4>{this.state.genres === undefined ? ' ' : this.state.genres.map((genre) => {                
+                <h4>Genres </h4>{this.state.genres === undefined ? ' ' : this.state.genres.map((genre) => {
                   return <NavLink activeClassName="active" className="textdeco" style={{ textDecoration: 'none', outline: 'none' }} exact to={`/gallery/${genre.name}/${genre.id}`}>{genre.name} </NavLink>
                 }
                 )
@@ -101,13 +100,10 @@ class Fiche extends React.Component {
               </div>
             </div>
             <div className="img-down">
-            <img src={"https://image.tmdb.org/t/p/w500" + this.state.fiche.backdrop_path} alt={this.state.fiche.original_title} />
+              <img src={"https://image.tmdb.org/t/p/w500" + this.state.fiche.backdrop_path} alt={this.state.fiche.original_title} />
             </div>
           </div>
-        </div>      
-         <div className="Footer">
-         <Footer />
-         </div>
+        </div>
       </div>
     );
   }

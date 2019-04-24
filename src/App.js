@@ -6,7 +6,8 @@ import { NavLink } from 'react-router-dom';
 import { Link } from "react-router-dom";
 import { BrowserRouter as Router } from "react-router-dom";
 import Routing from "./components/Routing";
-
+import { Button } from 'reactstrap';
+import Footer from './components/Footer';
 
 
 class App extends Component {
@@ -20,8 +21,6 @@ class App extends Component {
       search: ""
     };
     this.onChange = this.onChange.bind(this);
-
-    this.console = this.console.bind(this);
   }
 
   onChange(e) {
@@ -29,12 +28,6 @@ class App extends Component {
       search: e.target.value,
     });
   }
-
-  console(e) {
-    console.log(this.state.search)
-
-  }
-
   toggle() {
     this.setState({
       dropdownOpen: !this.state.dropdownOpen,
@@ -53,7 +46,7 @@ class App extends Component {
                   </NavLink></li>
                 </ul>
                 <ul className="navbar-nav mx-auto">
-                  
+
                   <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Adventure/12">Adventure</NavLink></li>
                   <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Science Fiction/878">Science Fiction</NavLink></li>
                   <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Action/28">Action</NavLink></li>
@@ -73,7 +66,7 @@ class App extends Component {
                     <Dropdown nav isOpen={this.state.dropdownOpen} toggle={this.toggle}>
                       <DropdownToggle nav caret>
                         Listes
-                </DropdownToggle>
+                    </DropdownToggle>
                       <DropdownMenu>
                         <DropdownItem>My favorites</DropdownItem>
                         <DropdownItem >To see later</DropdownItem>
@@ -94,13 +87,12 @@ class App extends Component {
                   onChange={this.onChange}
                 />
                 <Link to={`/searchgallery/${this.state.search}`}>
-                  <button
-                    onClick={this.console}
-                  >Search</button></Link>
+                  <Button>Search</Button></Link>
               </InputGroup>
             </div>
           </Fragment>
           <Routing />
+          <Footer className="footer" />
         </div>
       </Router>
     );

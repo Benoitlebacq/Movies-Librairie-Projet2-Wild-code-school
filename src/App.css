@@ -86,8 +86,6 @@ section.route-section {
   top: 0;
   left: 0;
   background-color: black;
-
-
 }
 
 .flexisation {
@@ -96,9 +94,16 @@ section.route-section {
   margin: auto;
   justify-content: center
 }
+
 .gallery-type{
   display: inline-flex;
   flex-wrap: wrap;
   margin: auto;
   justify-content: center
+}
+
+.footer{
+  color: green;
+  text-align: center;
+  bottom: 0vh;
 }

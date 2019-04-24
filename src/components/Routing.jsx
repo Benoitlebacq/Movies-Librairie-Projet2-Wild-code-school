@@ -7,28 +7,27 @@ import Casting from "./Casting"
 import Gallery from "./Gallery"
 import SearchGallery from "./SearchGallery"
 
-
 function Routing({ location }) {
-    return (
-      <div>
-        <TransitionGroup className="transition-group">
-          <CSSTransition
-            key={location.key}
-            timeout={{ enter: 300, exit: 300 }}
-            classNames="fade"
-          >
-            <section className="route-section">
-              <Switch location={location}>
-                <Route exact path="/" component={HomePage} />
-                <Route path="/fiche/:ficheNumber(\d+)" component={Fiche} />
-                <Route path="/casting/:castingNumber(\d+)" component={Casting} />
-                <Route path="/gallery/:galleryName/:id(\d+)" component={Gallery} />
-                <Route path="/searchgallery/:search" component={SearchGallery} />
-              </Switch>
-            </section>
-            </CSSTransition>
-        </TransitionGroup>
-      </div>
-    );
-  }
-  export default withRouter(Routing);  
+  return (
+    <div>
+      <TransitionGroup className="transition-group">
+        <CSSTransition
+          key={location.key}
+          timeout={{ enter: 300, exit: 300 }}
+          classNames="fade"
+        >
+          <section className="route-section">
+            <Switch location={location}>
+              <Route exact path="/" component={HomePage} />
+              <Route path="/fiche/:ficheNumber(\d+)" component={Fiche} />
+              <Route path="/casting/:castingNumber(\d+)" component={Casting} />
+              <Route path="/gallery/:galleryName/:id(\d+)" component={Gallery} />
+              <Route path="/searchgallery/:search" component={SearchGallery} />
+            </Switch>
+          </section>
+        </CSSTransition>
+      </TransitionGroup>
+    </div>
+  );
+}
+export default withRouter(Routing);  
