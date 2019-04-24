@@ -5,6 +5,8 @@ import CastingActors from "./CastingActors";
 import CastTech from "./CastTech";
 import CastMusic from "./CastMusic";
 import CastDirector from "./CastDirector";
+import favlogo from './img/fav.png';
+import { Button } from 'reactstrap';
 import '../Fiche.css';
 import Footer from "./Footer";
 
@@ -46,14 +48,31 @@ class Fiche extends React.Component {
           });
       });
   }
+
+  addFav = () => {
+
+  let favorites = {
+    user_id:"2",
+    movie_id: this.props.match.params.ficheNumber
+  };
+      axios.post('http://localhost:5050/favorites', {...favorites}) 
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+      })
+  alert("Added to favorite list");
+  }
+
   render() {
     return (
       <div>
         <div className="movie-description">
           <h1 className="movie-title">{this.state.fiche.original_title}</h1>
           <div className="movie-pic">
+            <div className="movie-fav">
             <img className="movie-poster" src={"https://image.tmdb.org/t/p/w500" + this.state.fiche.poster_path} alt={this.state.fiche.original_title} />
-
+            <img src={favlogo} className="favicon" onClick={this.addFav} alt="fav" title="Favorite" />
+            </div>
             <div className="youtube"><Youtube className="heigh-youtube" videoId={this.state.videoId} />
               <p className="movie-date">Release date : {this.state.fiche.release_date}</p>
             </div>

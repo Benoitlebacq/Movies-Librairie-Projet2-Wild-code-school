@@ -5,7 +5,7 @@ import { Dropdown, DropdownItem, DropdownToggle, DropdownMenu, InputGroup, Input
 import { NavLink, Link } from 'react-router-dom';
 import { BrowserRouter as Router } from "react-router-dom";
 import Routing from "./components/Routing";
-import ModalCreatList from './components/ModalCreatList';
+import ModalTest from './components/ModalTest';
 
 class App extends Component {
   constructor(props) {
@@ -15,12 +15,12 @@ class App extends Component {
     this.state = {
       dropdownOpen: false,
       search: "",
-      show: false,
+      //show: false,
     };
     this.onChange = this.onChange.bind(this);
     this.console = this.console.bind(this);
 
-    this.handleToogle = this.handleToogle.bind(this);
+    //this.handleToggle = this.handleToggle.bind(this);
   }
 
   onChange(e) {
@@ -39,14 +39,14 @@ class App extends Component {
     });
   }
 
-  handleToogle() {
-    this.setState(PrevState => ({
-      show : !PrevState.show
-    }))
-  }
+  /*handleToggle() {
+    this.setState({
+      show : !this.state.show,
+    });
+  }*/
 
   render() {
-    console.log('this.state.show => ' + this.state.show);
+    //console.log('this.state.show => ' + this.state.show);
     return (
       <Router>
         <div className="App">
@@ -81,10 +81,11 @@ class App extends Component {
                         <DropdownItem divider />
                           <DropdownItem id="addlist">
                           </DropdownItem>
-                          <Button variant="primary" onClick={this.handleToogle}>
-                          + Add liste
-                         </Button>
-                        <ModalCreatList show={this.state.show} />
+                          <Button variant="primary" onClick={this.handleToggle}>
+                          <ModalTest />
+                          </Button>
+                        {/*<ModalCreatList show={this.state.show} />*/}
+                       
                       </DropdownMenu>
                     </Dropdown>
                   </li>
