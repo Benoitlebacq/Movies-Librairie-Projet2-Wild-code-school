@@ -1,12 +1,11 @@
 import React, { Component, Fragment } from 'react';
 import './App.css';
 import './header.css';
-import { Dropdown, DropdownItem, DropdownToggle, DropdownMenu, InputGroup, InputGroupAddon, Input } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
-import { Link } from "react-router-dom";
+import { Dropdown, DropdownItem, DropdownToggle, DropdownMenu, InputGroup, InputGroupAddon, Input, Button } from 'reactstrap';
+import { NavLink, Link } from 'react-router-dom';
 import { BrowserRouter as Router } from "react-router-dom";
 import Routing from "./components/Routing";
-import { Button } from 'reactstrap';
+import ModalTest from './components/ModalTest';
 import Footer from './components/Footer';
 import ScrollToTop from "./components/ScrollTop"
 
@@ -33,7 +32,15 @@ class App extends Component {
       dropdownOpen: !this.state.dropdownOpen,
     });
   }
+
+  /*handleToggle() {
+    this.setState({
+      show : !this.state.show,
+    });
+  }*/
+
   render() {
+    //console.log('this.state.show => ' + this.state.show);
     return (
       <Router>
         <ScrollToTop>
@@ -73,7 +80,13 @@ class App extends Component {
                         <DropdownItem >To see later</DropdownItem>
                         <DropdownItem>Others lists</DropdownItem>
                         <DropdownItem divider />
-                        <DropdownItem>+ Add liste</DropdownItem>
+                          <DropdownItem id="addlist">
+                          </DropdownItem>
+                          <Button variant="primary" onClick={this.handleToggle}>
+                          <ModalTest />
+                          </Button>
+                        {/*<ModalCreatList show={this.state.show} />*/}
+                       
                       </DropdownMenu>
                     </Dropdown>
                   </li>

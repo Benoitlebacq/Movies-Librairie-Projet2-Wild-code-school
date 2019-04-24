@@ -35,10 +35,10 @@
   .img-down{
     text-align: center;
   }
-  .movie-poster {
+  .movie-poster, .favicon {
     float: left;
-    width: 20%;
-    margin: 4%;
+    width: 100%;
+    /*margin: 4%;*/
   }
   .movie-profil{
     width: 10%;
@@ -78,6 +78,23 @@
   .infos-casting{
     margin-left: 0;
   }
+
+  .favicon {
+    width: 50px;
+    cursor: pointer;
+  }
+
+  .favicon:hover {
+    opacity: 0.5;
+  }
+
+  .movie-fav{
+    display:flex;
+    flex-direction: column;
+    width:20%;
+  }
+
+  
   .textdeco {
     border-radius: 3px 0 0 3px;
     color: #999;
