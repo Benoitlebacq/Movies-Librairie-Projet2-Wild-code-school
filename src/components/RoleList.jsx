@@ -6,12 +6,14 @@ class RoleList extends React.Component {
     }
     render() {
         return (
-            <div className="flexisation">
-                <MoviePlayedIn
-                    cle={this.props.idMovie}
-                    key={this.props.idMovie}
-                />
-            </div>
+
+                    <div >
+                        <MoviePlayedIn
+                            cle={this.props.idMovie}
+                            key={this.props.idMovie}
+                        />
+                    </div>
+
         )
     }
 }

@@ -21,17 +21,24 @@ class Casting extends React.Component {
     }
     render() {
         return (
-            this.state.movieList.filter((movie) => {
-                return movie.original_title
-            }).map((role) => {
-                return <div className="flexisation">
-                    <RoleList
-                        moviePlayed={role.original_title}
-                        idMovie={role.id}
-                        key={role.original_title}
-                    />
+            <div className="container-fluid">
+                <div className="row mt-5 ">
+                    <div className="gallery-type">
+                        {this.state.movieList.filter((movie) => {
+                            return movie.original_title
+                        }).map((role) => {
+                            return <div>
+                                <RoleList
+                                    moviePlayed={role.original_title}
+                                    idMovie={role.id}
+                                    key={role.original_title}
+                                />
+                            </div>
+                        })
+                        }
+                    </div>
                 </div>
-            })
+            </div>
         )
     }
 }
