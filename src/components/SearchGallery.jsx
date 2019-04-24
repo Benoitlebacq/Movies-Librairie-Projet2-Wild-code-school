@@ -24,21 +24,25 @@ class SearchGallery extends Component {
   }
   render() {
     return (
-      <div className="mt-5">
-        {
-          this.state.movies.map((film, idx) => {
-            return (
-              <div className="flexisation border-0 m-1 ">
-                <Movie
-                  key={idx}
-                  cle={film.id}
-                  image={"https://image.tmdb.org/t/p/w500" + film.poster_path}
-                  genres={film.genre_ids}
-                />
-              </div>
-            );
-          })
-        }
+      <div className="container-fluid mt-5">
+        <div className="row ">
+          <div className="gallery-type">
+            {
+              this.state.movies.map((film, idx) => {
+                return (
+                  <div className="m-1">
+                    <Movie
+                      key={idx}
+                      cle={film.id}
+                      image={"https://image.tmdb.org/t/p/w500" + film.poster_path}
+                      genres={film.genre_ids}
+                    />
+                  </div>
+                );
+              })
+            }
+          </div>
+        </div>
       </div>
     )
   }
