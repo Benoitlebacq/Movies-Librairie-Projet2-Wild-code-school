@@ -34,9 +34,9 @@ class Categorie extends Component {
   render() {
     return (
       <div className="mt-5">
-        <NavLink activeClassName="active" style={{ textDecoration: 'none', outline: 'none' }} exact to={`/gallery/${this.props.type}/${this.props.id}`}>
-          <h2 className="categoriesName ml-3">{this.props.type}</h2>
-        </NavLink>
+      
+          <h2 className="categoriesName ml-3"><NavLink className="Categoname" style={{ textDecoration: 'none', outline: 'none' }} exact to={`/gallery/${this.props.type}/${this.props.id}`}>{this.props.type}</NavLink></h2>
+
         <button onClick={() => { this.upPageNumber() }}>up page</button>
         <div className="containing">
           {this.state.movies.map((film, idx) => {

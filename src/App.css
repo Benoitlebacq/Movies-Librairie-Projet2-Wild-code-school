@@ -20,6 +20,12 @@
 .categoriesName {
   font-family: 'Anton', sans-serif;
 }
+.Categoname{
+  color:#45D932
+}
+.Categoname:hover{
+  color:#45D932
+}
 .effect:hover {
   height: 35vh;;
 }
