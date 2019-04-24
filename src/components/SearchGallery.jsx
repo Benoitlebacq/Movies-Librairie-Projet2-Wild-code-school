@@ -24,13 +24,13 @@ class SearchGallery extends Component {
   }
   render() {
     return (
-      <div className="container-fluid">
-        <div className="row mt-5 ">
+      <div className="container-fluid mt-5">
+        <div className="row ">
           <div className="gallery-type">
             {
               this.state.movies.map((film, idx) => {
                 return (
-                  <div className=" m-1">
+                  <div className="m-1">
                     <Movie
                       key={idx}
                       cle={film.id}
