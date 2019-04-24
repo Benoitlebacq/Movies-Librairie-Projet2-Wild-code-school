@@ -8,7 +8,7 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Routing from "./components/Routing";
 import { Button } from 'reactstrap';
 import Footer from './components/Footer';
-
+import ScrollToTop from "./components/ScrollTop"
 
 class App extends Component {
   constructor(props) {
@@ -36,6 +36,7 @@ class App extends Component {
   render() {
     return (
       <Router>
+        <ScrollToTop>
         <div className="App">
           <Fragment>
             <div className="menu">
@@ -94,6 +95,7 @@ class App extends Component {
           <Routing />
           <Footer className="footer" />
         </div>
+        </ScrollToTop>
       </Router>
     );
   }
