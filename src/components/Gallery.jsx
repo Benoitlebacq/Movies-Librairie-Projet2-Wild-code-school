@@ -51,20 +51,24 @@ class Gallery extends Component {
   }
   render() {
     return (
-      <div className="row">
-        <h2 className="title-cat">{this.props.match.params.galleryName}</h2>
-        <button onClick={() => { this.upPageNumber() }}>up page</button>
-        <div className="gallery-type">
-          {this.state.movies.map((film, idx) => {
-            return (
-              <Movie
-                key={idx}
-                cle={film.id}
-                image={"https://image.tmdb.org/t/p/w500" + film.poster_path}
-                genres={film.genre_ids}
-              />
-            );
-          })}
+      <div className="container-fluid">
+        <div className="row" >
+          <h2 className="title-cat">{this.props.match.params.galleryName}</h2>
+          <button onClick={() => { this.upPageNumber() }}>up page</button>
+          <div className="gallery-type">
+            {this.state.movies.map((film, idx) => {
+              return (
+                <div className= "m-1">
+                <Movie
+                  key={idx}
+                  cle={film.id}
+                  image={"https://image.tmdb.org/t/p/w500" + film.poster_path}
+                  genres={film.genre_ids}
+                />
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     )
