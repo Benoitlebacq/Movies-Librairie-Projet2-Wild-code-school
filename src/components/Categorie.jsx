@@ -48,9 +48,9 @@ class Categorie extends Component {
         <h2 className="categoriesName ml-3"><NavLink className="Categoname" style={{ textDecoration: 'none', outline: 'none' }} exact to={`/gallery/${this.props.type}/${this.props.id}`}>{this.props.type}</NavLink></h2>
 
         <button onClick={() => { this.upPageNumber() }}>up page</button>
-        <div className="mt-5 row justify-content-center">
-          <a className="prev col" onClick={this.scroll.bind(null, -1)}>&#10094;</a>
-          <div className="containing col-10">
+        <div className="mt-5 row">
+
+          <div className="containing col-12">
             {this.state.movies.map((film, idx) => {
               return (
                 <Movie2
@@ -61,7 +61,8 @@ class Categorie extends Component {
               );
             })}
           </div>
-          <a className="next col" onClick={this.scroll.bind(null, 1)}>&#10095;</a>
+          <a className="prev" onClick={this.scroll.bind(null, -1)}>&#10094;</a>
+          <a className="next" onClick={this.scroll.bind(null, 1)}>&#10095;</a>
         </div>
       </div>
     )
