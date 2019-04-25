@@ -120,14 +120,16 @@ section.route-section {
   height: 35vh;
   background-color: rgba(0,0,0,0.8);
   border:none;
-  outline-style:none;
+
 }
 
 .next {
   right: 0px;
   
 }
-
+.prev:focus, .next:focus {
+  outline-style:none;
+}
 .prev {
   left: 0px;
 }
