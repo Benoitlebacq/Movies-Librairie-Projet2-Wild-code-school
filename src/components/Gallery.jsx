@@ -67,6 +67,7 @@ class Gallery extends Component {
       <div className="container-fluid">
         <div className="row" onScroll={()=>{this.upPageNumber()}}>
           <h2 className="title-cat">{this.props.match.params.galleryName}</h2>          
+         
           <div className="gallery-type">
             {this.state.movies.map((film, idx) => {
               return (
@@ -86,4 +87,6 @@ class Gallery extends Component {
     )
   }
 };
+
+
 export default Gallery;
