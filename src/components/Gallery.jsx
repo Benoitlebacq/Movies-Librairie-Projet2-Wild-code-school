@@ -63,7 +63,6 @@ class Gallery extends Component {
   }
   render() {
     return (
-
       <div className="container-fluid">
         <div className="row" onScroll={()=>{this.upPageNumber()}}>
           <h2 className="title-cat">{this.props.match.params.galleryName}</h2>          

@@ -6,7 +6,6 @@ import CastTech from "./CastTech";
 import CastMusic from "./CastMusic";
 import CastDirector from "./CastDirector";
 import favlogo from './img/fav.png';
-import { Button } from 'reactstrap';
 import '../Fiche.css';
 import Footer from "./Footer";
 import { NavLink } from 'react-router-dom';
