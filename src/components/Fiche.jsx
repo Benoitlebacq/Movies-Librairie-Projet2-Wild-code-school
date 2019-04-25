@@ -37,7 +37,7 @@ class Fiche extends React.Component {
             timeout: 1000
           })
           .get(
-            `/search?q=${query}&part=snippet&maxResults=1&type=video&key=AIzaSyBNHhT2wVa0lrIZsmMlTlTgIhY1VjrpZ7c`
+            `/search?q=${query}&part=snippet&maxResults=1&type=video&key=AIzaSyAYQjF7_hRZGUMoUwlcUezlq33cGFz5SO0`
           )
           .then(response => {
             const vidId = response.data.items[0].id.videoId;

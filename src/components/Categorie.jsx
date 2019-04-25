@@ -3,6 +3,9 @@ import Movie2 from "./Movie2";
 import { NavLink } from 'react-router-dom';
 import $ from "jquery";
 
+
+
+
 class Categorie extends Component {
   constructor(props) {
     super(props);
