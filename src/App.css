@@ -117,31 +117,32 @@ section.route-section {
 
 
 .prev, .next {
-  padding-top: 12vh;
-  padding-bottom: ;
+  padding-top: ;
+  padding-bottom: 3vh;
   text-align: center;
   cursor: pointer;
-  color: black;
+  color: white;
   transition: 0.6s ease;
   position: absolute;
-  width: 5vw;
+  width: 60px;
   height: 35vh;
   background-color: rgba(0,0,0,0.8);
+  border:none;
+  outline-style:none;
 }
 
 .next {
-  margin-left: 94.3vw;
+  right: 0px;
   
 }
 
 .prev {
-  margin-left: vw;
+  left: 0px;
 }
 
 .prev:hover, .next:hover {
   color: white;
   height: 35vh;
   background-color: rgba(0,0,0,0.8);
-  
-
+  outline-style:none;
 }

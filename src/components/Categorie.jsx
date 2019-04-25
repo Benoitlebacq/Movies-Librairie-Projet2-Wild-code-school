@@ -61,8 +61,8 @@ class Categorie extends Component {
               );
             })}
           </div>
-          <a className="prev" onClick={this.scroll.bind(null, -1)}>&#10094;</a>
-          <a className="next" onClick={this.scroll.bind(null, 1)}>&#10095;</a>
+          <button className="prev" onClick={this.scroll.bind(null, -1)}>&#10094;</button>
+          <button className="next" onClick={this.scroll.bind(null, 1)}>&#10095;</button>
         </div>
       </div>
     )
