@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Movie2 from "./Movie2";
 import { NavLink } from 'react-router-dom';
 import $ from "jquery";
+import className from 'classnames'
 
 class Categorie extends Component {
   constructor(props) {
@@ -11,17 +12,17 @@ class Categorie extends Component {
       page: 1,      
     };
     this.scroll = this.scroll.bind(this)
-  }
+  }  
   scroll(direction){
-    let far = $( '.containing' ).width()/2*direction;
-    let pos = $('.containing').scrollLeft() + far;
-    $('.containing').animate( { scrollLeft: pos }, 1000)
-    this.setState({
+    let far = $( `.containing${this.props.scroll}` ).width()/2*direction;
+    let pos = $(`.containing${this.props.scroll}`).scrollLeft() + far;
+    $(`.containing${this.props.scroll}`).animate( { scrollLeft: pos }, 1000)
+        this.setState({
       page: this.state.page + 1,
     }, () => {
       this.getMovie();
     });
-  
+
   }
   componentDidMount() {
     this.getMovie();
@@ -38,12 +39,11 @@ class Categorie extends Component {
       });
   }
   render() {
-    return (
+    return (      
       <div className="container-fluid ">
         <h2 className="categoriesName ml-3"><NavLink className="Categoname" style={{ textDecoration: 'none', outline: 'none' }} exact to={`/gallery/${this.props.type}/${this.props.id}`}>{this.props.type}</NavLink></h2>
         <div className="mt-5 row">
-
-          <div className="containing col-12">
+          <div className={ className(`containing${this.props.scroll} col-12` )}>
             {this.state.movies.map((film, idx) => {
               return (
                 <Movie2
@@ -58,7 +58,10 @@ class Categorie extends Component {
           <button className="next" onClick={this.scroll.bind(null, 1)}>&#10095;</button>
         </div>
       </div>
+      
     )
   }
 };
+
+
 export default Categorie;
