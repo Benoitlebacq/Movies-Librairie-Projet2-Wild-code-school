@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import Movie2 from "./Movie2";
 import { NavLink } from 'react-router-dom';
+
+
+
 class Categorie extends Component {
   constructor(props) {
     super(props);
