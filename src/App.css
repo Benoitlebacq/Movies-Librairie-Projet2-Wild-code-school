@@ -110,7 +110,7 @@ section.route-section {
 
 .prev, .next {
  
-  padding-bottom: 3vh;
+  padding-bottom: 5vh;
   text-align: center;
   cursor: pointer;
   color: white;
@@ -120,7 +120,7 @@ section.route-section {
   height: 35vh;
   background-color: rgba(0,0,0,0.8);
   border:none;
-
+  font-size: 5vh;
 }
 
 .next {
