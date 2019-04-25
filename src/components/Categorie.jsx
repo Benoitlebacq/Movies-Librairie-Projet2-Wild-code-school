@@ -14,9 +14,9 @@ class Categorie extends Component {
     this.scroll = this.scroll.bind(this)
   }  
   scroll(direction){
-    let far = $( `.containing${this.props.scroll}` ).width()/2*direction;
-    let pos = $(`.containing${this.props.scroll}`).scrollLeft() + far;
-    $(`.containing${this.props.scroll}`).animate( { scrollLeft: pos }, 1000)
+    let far = $( `.scroll${this.props.scroll}` ).width()/2*direction;
+    let pos = $(`.scroll${this.props.scroll}`).scrollLeft() + far;
+    $(`.scroll${this.props.scroll}`).animate( { scrollLeft: pos }, 1000)
         this.setState({
       page: this.state.page + 1,
     }, () => {
@@ -43,7 +43,7 @@ class Categorie extends Component {
       <div className="container-fluid ">
         <h2 className="categoriesName ml-3"><NavLink className="Categoname" style={{ textDecoration: 'none', outline: 'none' }} exact to={`/gallery/${this.props.type}/${this.props.id}`}>{this.props.type}</NavLink></h2>
         <div className="mt-5 row">
-          <div className={ className(`containing${this.props.scroll} col-12` )}>
+          <div className={ className(`scroll${this.props.scroll} col-12 containing` )}>
             {this.state.movies.map((film, idx) => {
               return (
                 <Movie2
