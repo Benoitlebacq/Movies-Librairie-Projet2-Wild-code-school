@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Movie2 from "./Movie2";
 import { NavLink } from 'react-router-dom';
 import $ from "jquery";
-
-
+import className from 'classnames'
+import styled from "styled-components";
 
 
 class Categorie extends Component {
@@ -20,9 +20,9 @@ class Categorie extends Component {
 
   
   scroll(direction){
-    let far = $( '.containing' ).width()/2*direction;
-    let pos = $('.containing').scrollLeft() + far;
-    $('.containing').animate( { scrollLeft: pos }, 1000)
+    let far = $( `.containing${this.props.scroll}` ).width()/2*direction;
+    let pos = $(`.containing${this.props.scroll}`).scrollLeft() + far;
+    $(`.containing${this.props.scroll}`).animate( { scrollLeft: pos }, 1000)
   }
   componentDidMount() {
     this.getMovie();
@@ -48,6 +48,7 @@ class Categorie extends Component {
 
   render() {
     return (
+      
       <div className="container-fluid ">
 
 
@@ -56,7 +57,7 @@ class Categorie extends Component {
         <button onClick={() => { this.upPageNumber() }}>up page</button>
         <div className="mt-5 row">
 
-          <div className="containing col-12">
+          <div className={ className(`containing${this.props.scroll} col-12` )}>
             {this.state.movies.map((film, idx) => {
               return (
                 <Movie2
@@ -71,7 +72,10 @@ class Categorie extends Component {
           <button className="next" onClick={this.scroll.bind(null, 1)}>&#10095;</button>
         </div>
       </div>
+      
     )
   }
 };
+
+
 export default Categorie;

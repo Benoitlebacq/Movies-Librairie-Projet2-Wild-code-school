@@ -6,14 +6,7 @@
   height: 100vh;
   color : white;
 }
-.containing {
-  display: flex;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  height: 35vh;
-  width: 100%;
-  white-space: nowrap;
-}
+
 
 .img-card{
   height:30vh;
@@ -166,4 +159,186 @@ section.route-section {
 #myBtn:hover {
   background-color: #555; 
 
+}
+
+/* Categorie scrool */
+
+.containing0 {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 35vh;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.containing1 {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 35vh;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.containing2 {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 35vh;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.containing3 {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 35vh;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.containing4 {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 35vh;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.containing5 {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 35vh;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.containing6 {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 35vh;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.containing7 {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 35vh;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.containing8 {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 35vh;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.containing9 {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 35vh;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.containing10 {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 35vh;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.containing11 {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 35vh;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.containing12 {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 35vh;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.containing13 {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 35vh;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.containing14 {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 35vh;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.containing15 {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 35vh;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.containing16 {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 35vh;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.containing17 {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 35vh;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.containing18 {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 35vh;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.containing19 {
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  height: 35vh;
+  width: 100%;
+  white-space: nowrap;
 }

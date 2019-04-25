@@ -21,6 +21,7 @@ class HomePage extends React.Component {
               type={item.type}
               url={item.url}
               id={item.id}
+              scroll={item.scroll}
             >
             </Categorie>
           )
