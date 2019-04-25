@@ -18,10 +18,7 @@
   .movie-genre{
     text-align: center;
   }
-  .movie-genre h4{
-    text-align: center;
-    margin-left: 0;
-  }
+
   .movie-pic{
     display: inline;
     justify-content: space-around;
@@ -48,7 +45,7 @@
     text-align: center;
     margin-bottom: 3%;
   }
-  .movie-casting h4{
+  .movie-casting {
     margin: 3%;
   }
   .ul-actors-pics{
@@ -58,6 +55,7 @@
   .youtube{
     margin-top: 5%;
     text-align: center;
+   
   }
   .movie-description h2 h4{
     text-align: left;
