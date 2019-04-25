@@ -8,9 +8,11 @@
 }
 .containing {
   display: flex;
-  overflow-x: scroll;
+  overflow-x: hidden;
   overflow-y: hidden;
   height: 35vh;
+  width: 100%;
+  white-space: nowrap;
 }
 
 .img-card{
@@ -112,6 +114,39 @@ section.route-section {
   bottom: 0vh;
 }
 
+
+
+
+.prev, .next {
+  padding-top: ;
+  padding-bottom: 3vh;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  transition: 0.6s ease;
+  position: absolute;
+  width: 60px;
+  height: 35vh;
+  background-color: rgba(0,0,0,0.8);
+  border:none;
+  outline-style:none;
+}
+
+.next {
+  right: 0px;
+  
+}
+
+.prev {
+  left: 0px;
+}
+
+.prev:hover, .next:hover {
+  color: white;
+  height: 35vh;
+  background-color: rgba(0,0,0,0.8);
+  outline-style:none;
+
 /*Top*/
 
 #myBtn {
@@ -132,4 +167,5 @@ section.route-section {
 
 #myBtn:hover {
   background-color: #555; 
+
 }
