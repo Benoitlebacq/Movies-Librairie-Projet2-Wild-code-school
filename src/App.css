@@ -30,6 +30,7 @@
 }
 .effect:hover {
   height: 35vh;;
+  transition: 0.4s ease;
 }
 h1,h2,h3,h4, .categoriesName {
   width: 90%;
@@ -114,11 +115,8 @@ section.route-section {
   bottom: 0vh;
 }
 
-
-
-
 .prev, .next {
-  padding-top: ;
+ 
   padding-bottom: 3vh;
   text-align: center;
   cursor: pointer;

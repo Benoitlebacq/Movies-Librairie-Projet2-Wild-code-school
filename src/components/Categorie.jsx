@@ -16,6 +16,9 @@ class Categorie extends Component {
     };
     this.scroll = this.scroll.bind(this)
   }
+
+
+  
   scroll(direction){
     let far = $( '.containing' ).width()/2*direction;
     let pos = $('.containing').scrollLeft() + far;
