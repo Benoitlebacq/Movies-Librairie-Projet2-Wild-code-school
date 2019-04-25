@@ -18,10 +18,7 @@
   .movie-genre{
     text-align: center;
   }
-  .movie-genre h4{
-    text-align: center;
-    margin-left: 0;
-  }
+
   .movie-pic{
     display: inline;
     justify-content: space-around;
@@ -35,10 +32,10 @@
   .img-down{
     text-align: center;
   }
-  .movie-poster {
+  .movie-poster, .favicon {
     float: left;
-    width: 20%;
-    margin: 4%;
+    width: 100%;
+    /*margin: 4%;*/
   }
   .movie-profil{
     width: 10%;
@@ -48,7 +45,7 @@
     text-align: center;
     margin-bottom: 3%;
   }
-  .movie-casting h4{
+  .movie-casting {
     margin: 3%;
   }
   .ul-actors-pics{
@@ -58,6 +55,7 @@
   .youtube{
     margin-top: 5%;
     text-align: center;
+   
   }
   .movie-description h2 h4{
     text-align: left;
@@ -78,6 +76,23 @@
   .infos-casting{
     margin-left: 0;
   }
+
+  .favicon {
+    width: 50px;
+    cursor: pointer;
+  }
+
+  .favicon:hover {
+    opacity: 0.5;
+  }
+
+  .movie-fav{
+    display:flex;
+    flex-direction: column;
+    width:20%;
+  }
+
+  
   .textdeco {
     border-radius: 3px 0 0 3px;
     color: #999;

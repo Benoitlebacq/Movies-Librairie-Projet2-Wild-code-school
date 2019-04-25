@@ -5,10 +5,12 @@ import CastingActors from "./CastingActors";
 import CastTech from "./CastTech";
 import CastMusic from "./CastMusic";
 import CastDirector from "./CastDirector";
+import favlogo from './img/fav.png';
 import '../Fiche.css';
 import Footer from "./Footer";
 import { NavLink } from 'react-router-dom';
-
+import { Card, CardImg, CardText, CardBody,
+  CardTitle, CardSubtitle, Button } from 'reactstrap';
 class Fiche extends React.Component {
   constructor(props) {
     super(props);
@@ -46,20 +48,37 @@ class Fiche extends React.Component {
           });
       });
   }
+
+  addFav = () => {
+
+  let favorites = {
+    user_id:"2",
+    movie_id: this.props.match.params.ficheNumber
+  };
+      axios.post('http://localhost:5050/favorites', {...favorites}) 
+      .then(res => {
+        console.log(res);
+        console.log(res.data);
+      })
+  alert("Added to favorite list");
+  }
+
   render() {
     return (
-      <div>
-        <div className="movie-description">
+      <div className="container-fluid">
+        <div className="movie-description justify-content-center">
           <h1 className="movie-title">{this.state.fiche.original_title}</h1>
-          <div className="movie-pic">
+          <div className="movie-pic row">
+            <div className="movie-fav col-lg-4 col-md-12">
             <img className="movie-poster" src={"https://image.tmdb.org/t/p/w500" + this.state.fiche.poster_path} alt={this.state.fiche.original_title} />
-
-            <div className="youtube"><Youtube className="heigh-youtube" videoId={this.state.videoId} />
+            <img src={favlogo} className="favicon" onClick={this.addFav} alt="fav" title="Favorite" />
+            </div>
+            <div className="youtube col-lg-6 col-md-12"><Youtube className="heigh-youtube" videoId={this.state.videoId} />
               <p className="movie-date">Release date : {this.state.fiche.release_date}</p>
             </div>
           </div>
-          <div className="movie-infos">
-            <div className="movie-synopsis">
+          <div className="movie-infos container ">
+            <div className="movie-synopsis mb-5">
               <h2>Synopsis</h2>
 
               <p>{this.state.fiche.overview}</p>
@@ -74,8 +93,9 @@ class Fiche extends React.Component {
               </ul>
             </div>
             <div className="movie-casting">
-              <h4>Casting</h4>
-              <div className="ul-actors-pics">
+                <div className="ml-5">
+              <h4 className="">Casting</h4></div>
+              <div className="ul-actors-pics mt-3">
                 <CastingActors idFilm={this.props.match.params.ficheNumber} />
               </div>
             </div>
