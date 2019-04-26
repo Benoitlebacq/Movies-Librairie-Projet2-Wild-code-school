@@ -24,7 +24,7 @@ class Fiche extends React.Component {
     this.getFiche()
   };
   getFiche() {
-    axios.get(`https://api.themoviedb.org/3/movie/ ${this.props.match.params.ficheNumber} ?api_key=a8a3380a564299f359c18e52aaa5bc79`)
+    axios.get(`https://api.themoviedb.org/3/movie/${this.props.match.params.ficheNumber}?api_key=a8a3380a564299f359c18e52aaa5bc79`)
       .then(response => {
         this.setState({
           fiche: response.data,
@@ -49,29 +49,30 @@ class Fiche extends React.Component {
       });
   }
   addFav = () => {
-    if (this.state.isOnFav === false) {
-      let favorites = {
-        user_id: "2",
-        movie_id: this.props.match.params.ficheNumber
-      };
-      axios.post('http://localhost:5050/favorites', { ...favorites })
-        .then(res => {
-        });
-      alert("Added to favorite list");
-      this.setState({isOnFav : !this.state.isOnFav})
-    }
-    else {
-      axios.get(`http://localhost:5050/favorites?movie_id=${this.props.match.params.ficheNumber}&user=2`)
-        .then(res => {
-          console.log(res.data[0].id)
-          let idToDelete = res.data[0].id            
-      axios.delete(`http://localhost:5050/favorites/${idToDelete}`)
-        .then(res => { 
-        });
+    axios.get(`http://localhost:5050/favorites?movie_id=${this.props.match.params.ficheNumber}&user=2`)
+      .then(res => {
+        if (res.data.length === 0) {
+          let favorites = {
+            user_id: "2",
+            movie_id: this.props.match.params.ficheNumber
+          };
+          axios.post('http://localhost:5050/favorites', { ...favorites })
+            .then(res => {
+            });
+          alert("Added to favorite list");
+        }
+        else {
+          axios.get(`http://localhost:5050/favorites?movie_id=${this.props.match.params.ficheNumber}&user=2`)
+            .then(res => {
+              console.log(res.data[0].id)
+              let idToDelete = res.data[0].id
+              axios.delete(`http://localhost:5050/favorites/${idToDelete}`)
+                .then(res => {
+                });
+            });
+          alert("Deleted from favorite list");
+        };
       });
-      alert("Deleted from favorite list");
-      this.setState({isOnFav : !this.state.isOnFav})
-    };
   };
   render() {
     return (
