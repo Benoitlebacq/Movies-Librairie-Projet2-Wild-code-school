@@ -9,10 +9,7 @@ import favlogo from './img/fav.png';
 import '../Fiche.css';
 import Footer from "./Footer";
 import { NavLink } from 'react-router-dom';
-import {
-  Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button
-} from 'reactstrap';
+
 class Fiche extends React.Component {
   constructor(props) {
     super(props);
