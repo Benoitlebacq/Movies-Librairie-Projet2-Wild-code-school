@@ -91,12 +91,12 @@ class App extends Component {
             <div className="recherche">
               <InputGroup>
                 <InputGroupAddon addonType="prepend"></InputGroupAddon>
-                <Input placeholder="Rechercher un film"
+                <Input placeholder="Search a movie"
                   value={this.state.search}
                   onChange={this.onChange}
                 />
                 <Link to={`/searchgallery/${this.state.search}`}>
-                  <Button>Search</Button></Link>
+                  <button className="buto ml-2">Search</button></Link>
               </InputGroup>
             </div>
           </Fragment>

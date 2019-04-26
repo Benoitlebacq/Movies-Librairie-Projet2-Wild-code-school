@@ -9,6 +9,7 @@ import favlogo from './img/fav.png';
 import '../Fiche.css';
 import Footer from "./Footer";
 import { NavLink } from 'react-router-dom';
+import swal from 'sweetalert';
 
 class Fiche extends React.Component {
   constructor(props) {
@@ -16,15 +17,14 @@ class Fiche extends React.Component {
     this.state = {
       fiche: [],
       genres: [],
-      videoId: "",
-      isOnFav: false
+      videoId: ""      
     };
   }
   componentDidMount() {
     this.getFiche()
   };
   getFiche() {
-    axios.get(`https://api.themoviedb.org/3/movie/ ${this.props.match.params.ficheNumber} ?api_key=a8a3380a564299f359c18e52aaa5bc79`)
+    axios.get(`https://api.themoviedb.org/3/movie/${this.props.match.params.ficheNumber}?api_key=a8a3380a564299f359c18e52aaa5bc79`)
       .then(response => {
         this.setState({
           fiche: response.data,
@@ -49,29 +49,30 @@ class Fiche extends React.Component {
       });
   }
   addFav = () => {
-    if (this.state.isOnFav === false) {
-      let favorites = {
-        user_id: "2",
-        movie_id: this.props.match.params.ficheNumber
-      };
-      axios.post('http://localhost:5050/favorites', { ...favorites })
-        .then(res => {
-        });
-      alert("Added to favorite list");
-      this.setState({isOnFav : !this.state.isOnFav})
-    }
-    else {
-      axios.get(`http://localhost:5050/favorites?movie_id=${this.props.match.params.ficheNumber}&user=2`)
-        .then(res => {
-          console.log(res.data[0].id)
-          let idToDelete = res.data[0].id            
-      axios.delete(`http://localhost:5050/favorites/${idToDelete}`)
-        .then(res => { 
-        });
+    axios.get(`http://localhost:5050/favorites?movie_id=${this.props.match.params.ficheNumber}&user=2`)
+      .then(res => {
+        if (res.data.length === 0) {
+          let favorites = {
+            user_id: "2",
+            movie_id: this.props.match.params.ficheNumber
+          };
+          axios.post('http://localhost:5050/favorites', { ...favorites })
+            .then(res => {
+            });
+          swal("Added", "You added this movie to favorite !", "success");
+        }
+        else {
+          axios.get(`http://localhost:5050/favorites?movie_id=${this.props.match.params.ficheNumber}&user=2`)
+            .then(res => {
+              console.log(res.data[0].id)
+              let idToDelete = res.data[0].id
+              axios.delete(`http://localhost:5050/favorites/${idToDelete}`)
+                .then(res => {
+                });
+            });
+          swal("Removed", "This movie has been deleted from favorite list" , "error");
+        };
       });
-      alert("Deleted from favorite list");
-      this.setState({isOnFav : !this.state.isOnFav})
-    };
   };
   render() {
     return (
