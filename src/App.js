@@ -76,18 +76,14 @@ class App extends Component {
                         Listes
                     </DropdownToggle>
                       <DropdownMenu>
-                        <DropdownItem>My favorites</DropdownItem>
-                        <DropdownItem >To see later</DropdownItem>
-                        <DropdownItem>Others lists</DropdownItem>
-                        <DropdownItem divider />
-                          <DropdownItem id="addlist">
-                          </DropdownItem>
-                          <Button variant="primary" onClick={this.handleToggle}>
-                          <ModalTest />
-                          </Button>
-                        {/*<ModalCreatList show={this.state.show} />*/}
-                       
-                      </DropdownMenu>
+                      <DropdownItem>
+                      <NavLink activeClassName="active" className="nav-link" exact to="/GalleryFavorite">
+                      My favorites
+                      </NavLink>
+                    </DropdownItem>
+                    <DropdownItem divider />
+                    <DropdownItem>+ Add liste</DropdownItem>
+                  </DropdownMenu>        
                     </Dropdown>
                   </li>
                 </ul>

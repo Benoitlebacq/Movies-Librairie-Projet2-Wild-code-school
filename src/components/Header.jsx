@@ -63,9 +63,11 @@ class Header extends React.Component {
                     Listes
                 </DropdownToggle>
                   <DropdownMenu>
-                    <DropdownItem>My favorites</DropdownItem>
-                    <DropdownItem >To see later</DropdownItem>
-                    <DropdownItem>Others lists</DropdownItem>
+                    <DropdownItem>
+                      <NavLink activeClassName="active" className="nav-link" exact to="/gallery/MyFavorites">
+                      My favorites
+                      </NavLink>
+                    </DropdownItem>
                     <DropdownItem divider />
                     <DropdownItem>+ Add liste</DropdownItem>
                   </DropdownMenu>
