@@ -1,40 +1,34 @@
 import React, { Fragment } from "react";
-import {Dropdown, DropdownItem, DropdownToggle, DropdownMenu, InputGroup, InputGroupAddon, Input } from 'reactstrap';
+import { Dropdown, DropdownItem, DropdownToggle, DropdownMenu, InputGroup, InputGroupAddon, Input } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 import '../App.css';
-import { Link } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
-
     this.toggle = this.toggle.bind(this);
     this.state = {
       dropdownOpen: false,
-      show : false,
-
-      search :""
+      show: false,
+      search: ""
     };
     this.onChange = this.onChange.bind(this);
     this.console = this.console.bind(this);
-  }
-
+  };
   onChange(e) {
     this.setState({
       search: e.target.value,
     });
-  }
-
-  console(e){
+  };
+  console(e) {
     console.log(this.state.search)
-
-  }
-
+  };
   toggle() {
     this.setState({
       dropdownOpen: !this.state.dropdownOpen,
     });
-  }
+  };
   render() {
     return (
       <Fragment>
@@ -43,9 +37,9 @@ class Header extends React.Component {
             <ul>
               <li><NavLink activeClassName="active" exact to="/">
                 <img className="logo" src="https://image.noelshack.com/fichiers/2019/15/5/1555076151-screenshot-from-2019-04-12-11-21-07-convertimage-1.png" />
-                </NavLink>
+              </NavLink>
               </li>
-           </ul>
+            </ul>
             <ul className="navbar-nav mx-auto">
               <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Science Fiction">Science Fiction</NavLink></li>
               <li><NavLink activeClassName="active" className="nav-link" exact to="/gallery/Western">Westerns</NavLink></li>
@@ -65,7 +59,7 @@ class Header extends React.Component {
                   <DropdownMenu>
                     <DropdownItem>
                       <NavLink activeClassName="active" className="nav-link" exact to="/gallery/MyFavorites">
-                      My favorites
+                        My favorites
                       </NavLink>
                     </DropdownItem>
                     <DropdownItem divider />
@@ -79,14 +73,14 @@ class Header extends React.Component {
         <div className="recherche">
           <InputGroup>
             <InputGroupAddon addonType="prepend"></InputGroupAddon>
-            <Input placeholder="Rechercher un film" 
-             value={this.state.search}
-             onChange={this.onChange}
+            <Input placeholder="Rechercher un film"
+              value={this.state.search}
+              onChange={this.onChange}
             />
-            <Link  to={`/`}>
-            <button
-            onClick= {this.console}
-            >Search</button></Link>
+            <Link to={`/`}>
+              <button
+                onClick={this.console}
+              >Search</button></Link>
           </InputGroup>
         </div>
       </Fragment>

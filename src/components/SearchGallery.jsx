@@ -1,4 +1,4 @@
-import React , {Component} from 'react';
+import React, { Component } from 'react';
 import Movie from "./Movie"
 const axios = require('axios');
 
@@ -8,10 +8,10 @@ class SearchGallery extends Component {
     this.state = {
       movies: []
     };
-  }
+  };
   componentDidMount() {
     this.getData();
-  }
+  };
   getData() {
     const query = this.props.match.params.search;
     axios.get(`https://api.themoviedb.org/3/search/movie?api_key=1092ee57947c8bdfc25a5a0641ecb8ec&language=en-US&page=1&include_adult=false&query=${query}`)
@@ -21,7 +21,7 @@ class SearchGallery extends Component {
         });
         console.log(this.state.movies)
       });
-  }
+  };
   render() {
     return (
       <div className="container-fluid mt-5">

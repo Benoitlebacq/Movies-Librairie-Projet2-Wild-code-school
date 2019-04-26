@@ -7,7 +7,7 @@ class Casting extends React.Component {
         this.state = {
             movieList: []
         };
-    }
+    };
     componentDidMount() {
         this.getMovielist()
     }
@@ -18,7 +18,7 @@ class Casting extends React.Component {
                     movieList: resp.data.cast
                 });
             })
-    }
+    };
     render() {
         return (
             <div className="container-fluid">
@@ -40,6 +40,6 @@ class Casting extends React.Component {
                 </div>
             </div>
         )
-    }
-}
+    };
+};
 export default Casting;

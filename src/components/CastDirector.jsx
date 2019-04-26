@@ -7,14 +7,14 @@ class CastDirector extends React.Component {
         this.state = {
             crew: []
         }
-    }
+    };
     componentDidMount() {
         axios.get(`https://api.themoviedb.org/3/movie/ ${this.props.idFilm} /credits?api_key=a8a3380a564299f359c18e52aaa5bc79`).then(res => {
             this.setState({
                 crew: res.data.crew
             });
         });
-    }
+    };
     render() {
         return (
             this.state.crew.filter((member, i) => {
@@ -24,6 +24,6 @@ class CastDirector extends React.Component {
             }
             )
         )
-    }
-}
+    };
+};
 export default CastDirector;

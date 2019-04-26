@@ -22,11 +22,10 @@ class Categorie extends Component {
     }, () => {
       this.getMovie();
     });
-
-  }
+  };
   componentDidMount() {
     this.getMovie();
-  }
+  };
   getMovie() {
     const baseUrl = this.props.url;
     fetch(baseUrl + this.state.page)
@@ -37,7 +36,7 @@ class Categorie extends Component {
           movies: newList
         });
       });
-  }
+  };
   render() {
     return (      
       <div className="container-fluid ">
@@ -62,6 +61,5 @@ class Categorie extends Component {
     )
   }
 };
-
 
 export default Categorie;
