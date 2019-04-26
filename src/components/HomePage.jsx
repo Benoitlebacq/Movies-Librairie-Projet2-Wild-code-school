@@ -16,7 +16,6 @@ class HomePage extends React.Component {
         {this.state.Data.map((item) => {
           return (
             <Categorie
-
               key={item.type}
               type={item.type}
               url={item.url}
@@ -31,6 +30,6 @@ class HomePage extends React.Component {
         </div>
       </div>
     );
-  }
-}
+  };
+};
 export default HomePage;

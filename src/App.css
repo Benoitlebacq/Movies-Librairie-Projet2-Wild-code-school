@@ -1,13 +1,10 @@
 
-
 .App { 
   text-align: left;
   background-color: black;
   height: 100vh;
   color : white;
 }
-
-
 .img-card{
   height:30vh;
 }
@@ -29,15 +26,12 @@ h1,h2,h3,h4, .categoriesName {
   width: 90%;
   margin-left: 10%;
   margin-right: 10%;
-  color: #45D932 ;
- 
+  color: #45D932 ; 
 }
-
 ul
  {
   list-style: none;
 }
-
 .logo {
   width: 8em;
 }
@@ -47,47 +41,6 @@ ul
 .nav-link{
   color : green !important;
 }
-
-
-.flexisation{
-  display: inline-flex;
-  flex-wrap: wrap;  
-  justify-content: center;
-
-}
-/* routing */
-
-.fade-enter {
-  opacity: 0.01;
-}
-
-.fade-enter.fade-enter-active {
-  opacity: 1;
-  transition: opacity 200ms ease-in;
-}
-
-.fade-exit {
-  opacity: 1;
-}
-
-.fade-exit.fade-exit-active {
-  opacity: 0.01;
-  transition: opacity 300ms ease-in;
-}
-
-div.transition-group {
-  position: relative;
-
-}
-
-section.route-section {
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background-color: black;
-}
-
 .flexisation {
   display: inline-flex;
   flex-wrap: wrap;
@@ -95,21 +48,44 @@ section.route-section {
   justify-content: center
 }
 
+/* routing */
+
+.fade-enter {
+  opacity: 0.01;
+}
+.fade-enter.fade-enter-active {
+  opacity: 1;
+  transition: opacity 200ms ease-in;
+}
+.fade-exit {
+  opacity: 1;
+}
+.fade-exit.fade-exit-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+div.transition-group {
+  position: relative;
+}
+section.route-section {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: black;
+}
 .gallery-type{
   display: inline-flex;
   flex-wrap: wrap;
   margin: auto;
   justify-content: center
 }
-
 .footer{
   color: green;
   text-align: center;
   bottom: 0vh;
 }
-
-.prev, .next {
- 
+.prev, .next { 
   padding-bottom: 5vh;
   text-align: center;
   cursor: pointer;
@@ -122,10 +98,8 @@ section.route-section {
   border:none;
   font-size: 5vh;
 }
-
 .next {
-  right: 0px;
-  
+  right: 0px;  
 }
 .prev:focus, .next:focus {
   outline-style:none;
@@ -133,7 +107,6 @@ section.route-section {
 .prev {
   left: 0px;
 }
-
 .prev:hover, .next:hover {
   color: white;
   height: 35vh;
@@ -157,14 +130,11 @@ section.route-section {
   border-radius: 10px; 
   font-size: 18px; 
 }
-
 #myBtn:hover {
   background-color: #555; 
-
 }
 
 /* Categorie scrool */
-
 
 .containing {
   display: flex;
@@ -174,5 +144,3 @@ section.route-section {
   width: 100%;
   white-space: nowrap;
 }
-
-

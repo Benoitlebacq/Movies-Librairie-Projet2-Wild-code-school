@@ -9,6 +9,6 @@ class CastingLink extends React.Component {
                 <span>{this.props.name}</span>
             </div>
         )
-    }
-}
+    };
+};
 export default CastingLink;

@@ -7,7 +7,7 @@ class CastingActors extends React.Component {
         this.state = {
             cast: []
         }
-    }
+    };
     componentDidMount() {
         axios.get(`https://api.themoviedb.org/3/movie/${this.props.idFilm}/credits?api_key=a8a3380a564299f359c18e52aaa5bc79`)
             .then(res => {
@@ -15,7 +15,7 @@ class CastingActors extends React.Component {
                     cast: res.data.cast
                 });
             });
-    }
+    };
     render() {
         return (
             this.state.cast.filter((member, i) => {
@@ -31,6 +31,6 @@ class CastingActors extends React.Component {
             }
             )
         )
-    }
-}
+    };
+};
 export default CastingActors;

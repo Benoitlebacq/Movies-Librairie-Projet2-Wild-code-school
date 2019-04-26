@@ -15,7 +15,7 @@ class CastMusic extends React.Component {
                     crew: res.data.crew
                 });
             });
-    }
+    };
     render() {
         return (
             this.state.crew.filter((member, i) => {
@@ -25,7 +25,6 @@ class CastMusic extends React.Component {
             }
             )
         )
-    }
-
-}
+    };
+};
 export default CastMusic;
