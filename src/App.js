@@ -5,7 +5,6 @@ import { Dropdown, DropdownItem, DropdownToggle, DropdownMenu, InputGroup, Input
 import { NavLink, Link } from 'react-router-dom';
 import { BrowserRouter as Router } from "react-router-dom";
 import Routing from "./components/Routing";
-import ModalTest from './components/ModalTest';
 import Footer from './components/Footer';
 import ScrollToTop from "./components/ScrollTop"
 
