@@ -7,6 +7,7 @@ import Casting from "./Casting"
 import Gallery from "./Gallery"
 import SearchGallery from "./SearchGallery"
 import GalleryFavoris from "./GalleryFavoris";
+import PageFooter from "./PageFooter";
 
 function Routing({ location }) {
   return (
@@ -25,6 +26,7 @@ function Routing({ location }) {
               <Route path="/gallery/:galleryName/:id(\d+)" component={Gallery} />
               <Route path="/searchgallery/:search" component={SearchGallery} />
               <Route path="/GalleryFavorite/" component={GalleryFavoris} />
+              <Route path="/PageFooter/" component={PageFooter} />
             </Switch>
           </section>
         </CSSTransition>

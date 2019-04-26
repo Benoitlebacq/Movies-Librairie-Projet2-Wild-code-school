@@ -144,3 +144,9 @@ section.route-section {
   width: 100%;
   white-space: nowrap;
 }
+
+.equipe {
+  width: 15%;
+  height : 15%;
+  border-radius: 50px;
+}
