@@ -59,7 +59,7 @@ class Fiche extends React.Component {
           axios.post('http://localhost:5050/favorites', { ...favorites })
             .then(res => {
             });
-          swal("Added to favorite list");
+          swal("Added", "You added this movie to favorite !", "success");
         }
         else {
           axios.get(`http://localhost:5050/favorites?movie_id=${this.props.match.params.ficheNumber}&user=2`)
@@ -70,7 +70,7 @@ class Fiche extends React.Component {
                 .then(res => {
                 });
             });
-          swal("Deleted from favorite list");
+          swal("Removed", "This movie has been deleted from favorite list" , "error");
         };
       });
   };
