@@ -8,73 +8,36 @@ class GalleryFavoris extends Component {
     super(props);
     this.state = {
       movies: [],
-      newList: [],
-      page: 1,
-      lastCall: 0
     };
   }
   componentDidMount() {
-    //this.getData();
     axios.get('http://localhost:5050/favorites/')
       .then((response) => {
-        console.log((typeof JSON.stringify(response.data))
-        /*this.setState({
-          newList: this.state.newList.push(JSON.stringify(response.data))
-        }); */  
-       
-      )})
-      //console.log(this.state.newList)
-        }
-
-  
-
-  
-
-  /*getData() {
-    axios.get('http://localhost:5050/favorites/')
-      .then(response => {
-        console.log(response.data)
-        this.setState({
-          newList: response.data
-        });
-        console.log(this.state.newList)
-       
-      });
-  };*/
-
-  
-  render() {    
-    
-    let favoriteDetails = [];
-      return (
-      <div>
-        {this.state.newList.map((result, i) => {
-          return ( 
-            result.movie_id
-           //
-          );
-        })       
-        .map((fav, i) =>{
-          console.log(fav) 
-          return(              
-            axios.get(`https://api.themoviedb.org/3/movie/${fav}?api_key=a8a3380a564299f359c18e52aaa5bc79`)
+        let movies = [];
+        response.data.map((fav) => {
+          const movieId = fav.movie_id;
+          axios.get(`https://api.themoviedb.org/3/movie/${movieId}?api_key=a8a3380a564299f359c18e52aaa5bc79`)
             .then(response => {
-              
-              favoriteDetails[i].poster_path = response.data.poster_path
-              favoriteDetails[i].id = response.data.id
-              favoriteDetails[i].genre_ids = response.data.genre_ids
-              console.log(favoriteDetails[i])
-              })            
-          )
-                  
-        }
-        )}
-
+              const movie = {
+                id: response.data.id,
+                poster_path: response.data.poster_path,
+                genre_ids: response.data.genre_ids
+              };
+              movies.push(movie);
+              this.setState({
+                movies: movies
+              });
+            })
+        });
+      });
+  };
+  render() {
+    return (
+      <div>
         <div className="container-fluid">
           <div className="row" >
-            <h2 className="title-cat">blablabla</h2>
             <div className="gallery-type">
-              {favoriteDetails.map((film, idx) => {
+              {this.state.movies.map((film, idx) => {
                 return (
                   <div className="m-1">
                     <Movie
