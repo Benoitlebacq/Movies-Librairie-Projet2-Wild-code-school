@@ -2,18 +2,13 @@ import React from "react";
 import { Button, Modal, ModalHeader,ModalBody,ModalFooter, Input } from 'reactstrap';
 
 class ModalCreatList extends React.Component {
-
     constructor(props) {
         super(props);
-
         this.state = {
-
           show: false,
-        };
-    
+        };    
         this.handleToggle = this.handleToggle.bind(this);
-      }
-    
+      };    
     render() {
         console.log('this.state.show in ModalCreatList => ' + this.props.show);
         return (
@@ -36,7 +31,7 @@ class ModalCreatList extends React.Component {
                 </Modal>
             </React.Fragment>
         )
-    }
-}
+    };
+};
 
 export default ModalCreatList;
