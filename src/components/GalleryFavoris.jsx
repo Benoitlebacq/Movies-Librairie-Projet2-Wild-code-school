@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from "axios";
 import Movie from "./Movie"
 
-
 class GalleryFavoris extends Component {
   constructor(props) {
     super(props);

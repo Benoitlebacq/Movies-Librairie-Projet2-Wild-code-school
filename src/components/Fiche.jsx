@@ -9,6 +9,7 @@ import favlogo from './img/fav.png';
 import '../Fiche.css';
 import Footer from "./Footer";
 import { NavLink } from 'react-router-dom';
+import swal from 'sweetalert';
 
 class Fiche extends React.Component {
   constructor(props) {
@@ -58,7 +59,7 @@ class Fiche extends React.Component {
           axios.post('http://localhost:5050/favorites', { ...favorites })
             .then(res => {
             });
-          alert("Added to favorite list");
+          swal("Added to favorite list");
         }
         else {
           axios.get(`http://localhost:5050/favorites?movie_id=${this.props.match.params.ficheNumber}&user=2`)
@@ -69,7 +70,7 @@ class Fiche extends React.Component {
                 .then(res => {
                 });
             });
-          alert("Deleted from favorite list");
+          swal("Deleted from favorite list");
         };
       });
   };
