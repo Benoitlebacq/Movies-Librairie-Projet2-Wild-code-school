@@ -77,7 +77,7 @@ class App extends Component {
                     </DropdownToggle>
                       <DropdownMenu>
                       <DropdownItem>
-                      <NavLink activeClassName="active" className="nav-link" exact to="/GalleryFavoris">
+                      <NavLink activeClassName="active" className="nav-link" exact to="/GalleryFavorite">
                       My favorites
                       </NavLink>
                     </DropdownItem>
