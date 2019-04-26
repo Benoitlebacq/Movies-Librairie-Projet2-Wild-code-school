@@ -16,8 +16,7 @@ class Fiche extends React.Component {
     this.state = {
       fiche: [],
       genres: [],
-      videoId: "",
-      isOnFav: false
+      videoId: ""      
     };
   }
   componentDidMount() {
