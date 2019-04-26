@@ -73,9 +73,9 @@ class Header extends React.Component {
         <div className="recherche">
           <InputGroup>
             <InputGroupAddon addonType="prepend"></InputGroupAddon>
-            <Input placeholder="Rechercher un film"
-              value={this.state.search}
-              onChange={this.onChange}
+            <Input placeholder="Search a movie" 
+             value={this.state.search}
+             onChange={this.onChange}
             />
             <Link to={`/`}>
               <button
