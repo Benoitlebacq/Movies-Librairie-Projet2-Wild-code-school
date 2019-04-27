@@ -1,6 +1,6 @@
 import React from "react";
 import axios from 'axios';
-import RoleList from "./RoleList"
+import MoviesPlayedIn from "./MoviesPlayedIn"
 class Casting extends React.Component {
     constructor(props) {
         super(props);
@@ -28,7 +28,7 @@ class Casting extends React.Component {
                             return movie.original_title
                         }).map((role) => {
                             return <div>
-                                <RoleList
+                                <MoviesPlayedIn
                                     moviePlayed={role.original_title}
                                     idMovie={role.id}
                                     key={role.original_title}

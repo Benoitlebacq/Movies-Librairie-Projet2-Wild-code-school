@@ -14,17 +14,16 @@ class MoviePlayedIn extends React.Component {
   }  
   getMovie() { 
     if (this.state.compteur % 2 === 0) {
-      axios.get(`https://api.themoviedb.org/3/movie/${this.props.cle}?api_key=ff37a1a34cd2beecb41b30cbfda1916b`)
+      axios.get(`https://api.themoviedb.org/3/movie/${this.props.idMovie}?api_key=ff37a1a34cd2beecb41b30cbfda1916b`)
         .then(response => {
           this.setState({
             movies: response.data
           });
         });
-        this.setState({compteur : this.state.compteur+1})
-      console.log(this.state.compteur)
+        this.setState({compteur : this.state.compteur+1})      
     }
     else {
-      axios.get(`https://api.themoviedb.org/3/movie/${this.props.cle}?api_key=1092ee57947c8bdfc25a5a0641ecb8ec`)
+      axios.get(`https://api.themoviedb.org/3/movie/${this.props.idMovie}?api_key=1092ee57947c8bdfc25a5a0641ecb8ec`)
         .then(response => {
           this.setState({
             movies: response.data
@@ -41,7 +40,7 @@ class MoviePlayedIn extends React.Component {
         <div className=" border-0 m-1">
           {
             isLoaded()
-              ? <Link to={`/fiche/${this.props.cle}`}><img src={`https://image.tmdb.org/t/p/w500${this.state.movies.poster_path}`} alt="" className="img-card" /></Link>
+              ? <Link to={`/fiche/${this.props.idMovie}`}><img src={`https://image.tmdb.org/t/p/w500${this.state.movies.poster_path}`} alt="" className="img-card" /></Link>
               : <img src={require("../loading.png")} className="img-card"></img>
           }
         </div>

@@ -37,10 +37,8 @@ class Categorie extends Component {
         });
       });
   };
-  horizontalScroll(event) {
-    console.log(event.target.scrollWidth, event.target.offsetWidth, event.target.offsetLeft, event.target.scrollLeft)
-    if (event.target.scrollWidth - event.target.scrollLeft < event.target.offsetWidth + 200 && !this.fetching) {
-        console.log("GO")
+  horizontalScroll(event) {    
+    if (event.target.scrollWidth - event.target.scrollLeft < event.target.offsetWidth + 200 && !this.fetching) {        
         this.setState({
             page: this.state.page + 1,
         }, () => {

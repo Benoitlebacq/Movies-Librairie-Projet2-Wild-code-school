@@ -18,12 +18,13 @@ class Fiche extends React.Component {
     this.state = {
       fiche: [],
       genres: [],
-      videoId: ""
+      videoId: "",
+      rateToSet : 0
     };
   }
   componentDidMount() {
     this.getFiche()
-
+    this.setDefaultRate()
   };
   getFiche() {
     axios.get(`https://api.themoviedb.org/3/movie/${this.props.match.params.ficheNumber}?api_key=a8a3380a564299f359c18e52aaa5bc79`)
@@ -75,11 +76,19 @@ class Fiche extends React.Component {
         };
       });
   };
+  setDefaultRate(){
+    axios.get(`http://localhost:5050/rating?movie_id=${this.props.match.params.ficheNumber}&user=2`)
+            .then(res =>{
+              if (res.data.length!==0){
+                this.setState({rateToSet : res.data[0].rate})
+              }
+              
+            })
+  };
 
   addRate = (value) => {
     axios.get(`http://localhost:5050/rating?movie_id=${this.props.match.params.ficheNumber}&user=2`)
-      .then(res => {
-        console.log(res.data.length)
+      .then(res => {        
         if (res.data.length === 0) {
           let rating = {
             user_id: "2",
@@ -96,8 +105,7 @@ class Fiche extends React.Component {
             .then(res => {
               let idToDelete = res.data[0].id
               axios.delete(`http://localhost:5050/rating/${idToDelete}`)
-                .then(res => {
-                  console.log(idToDelete)
+                .then(res => {                  
                 });
             });
           let rating = {
@@ -129,7 +137,8 @@ class Fiche extends React.Component {
           </div>
           <div className="Rating">
             Rate this movie : <Rating stop={10} onClick={(value) => this.addRate(value)}
-              placeholderRating={0}
+              placeholderRating={this.state.rateToSet}
+              placeholderSymbol={<img src="https://cdn3.iconfinder.com/data/icons/shapes-have-feelings-too-v2/640/star-face-emoji-shapes-happy-emoticons-smiley-2-512.png" className="Rate-icon" />}
               emptySymbol={<img src="https://cdn3.iconfinder.com/data/icons/pretty-office-part-3/256/Star_empty-512.png" className="Rate-icon" />}
               fullSymbol={<img src="https://cdn3.iconfinder.com/data/icons/shapes-have-feelings-too-v2/640/star-face-emoji-shapes-happy-emoticons-smiley-2-512.png" className="Rate-icon" />}
               onClick={this.addRate}
