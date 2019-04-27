@@ -10,6 +10,7 @@ import '../Fiche.css';
 import Footer from "./Footer";
 import { NavLink } from 'react-router-dom';
 import swal from 'sweetalert';
+import Rating from "react-rating";
 
 class Fiche extends React.Component {
   constructor(props) {
@@ -87,6 +88,13 @@ class Fiche extends React.Component {
             <div className="youtube col-lg-6 col-md-12"><Youtube className="heigh-youtube" videoId={this.state.videoId} />
               <p className="movie-date">Release date : {this.state.fiche.release_date}</p>
             </div>
+          </div>
+          <div className="Rating">
+          Rate this movie : <Rating stop={10}
+          placeholderRating={0}
+          emptySymbol={<img src="https://cdn3.iconfinder.com/data/icons/pretty-office-part-3/256/Star_empty-512.png" className="icon" />}
+          fullSymbol={<img src="https://cdn3.iconfinder.com/data/icons/shapes-have-feelings-too-v2/640/star-face-emoji-shapes-happy-emoticons-smiley-2-512.png" className="icon" />}
+          />
           </div>
           <div className="movie-infos container ">
             <div className="movie-synopsis mb-5">
