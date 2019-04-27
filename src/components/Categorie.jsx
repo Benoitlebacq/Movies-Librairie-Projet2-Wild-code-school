@@ -37,12 +37,23 @@ class Categorie extends Component {
         });
       });
   };
+  horizontalScroll(event) {
+    console.log(event.target.scrollWidth, event.target.offsetWidth, event.target.offsetLeft, event.target.scrollLeft)
+    if (event.target.scrollWidth - event.target.scrollLeft < event.target.offsetWidth + 200 && !this.fetching) {
+        console.log("GO")
+        this.setState({
+            page: this.state.page + 1,
+        }, () => {
+            this.getMovie();
+        });
+    }
+}
   render() {
     return (      
       <div className="container-fluid ">
         <h2 className="categoriesName ml-3"><NavLink className="Categoname" style={{ textDecoration: 'none', outline: 'none' }} exact to={`/gallery/${this.props.type}/${this.props.id}`}>{this.props.type}</NavLink></h2>
         <div className="mt-5 row">
-          <div className={ className(`scroll${this.props.scroll} col-12 containing` )}>
+          <div className={ className(`scroll${this.props.scroll} col-12 containing` )} onScroll={event=>this.horizontalScroll(event)}>
             {this.state.movies.map((film, idx) => {
               return (
                 <Movie2

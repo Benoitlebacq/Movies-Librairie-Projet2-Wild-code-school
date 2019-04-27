@@ -15,7 +15,6 @@ class App extends Component {
     this.toggle = this.toggle.bind(this);
     this.state = {
       dropdownOpen: false,
-
       search: ""
     };
     this.onChange = this.onChange.bind(this);
@@ -32,14 +31,7 @@ class App extends Component {
     });
   }
 
-  /*handleToggle() {
-    this.setState({
-      show : !this.state.show,
-    });
-  }*/
-
-  render() {
-    //console.log('this.state.show => ' + this.state.show);
+  render() {   
     return (
       <Router>
         <ScrollToTop>
@@ -88,7 +80,7 @@ class App extends Component {
                 </ul>
               </nav>
             </div>
-            <div className="recherche">
+            <form className="recherche">
               <InputGroup>
                 <InputGroupAddon addonType="prepend"></InputGroupAddon>
                 <Input placeholder="Search a movie"
@@ -98,7 +90,7 @@ class App extends Component {
                 <Link to={`/searchgallery/${this.state.search}`}>
                   <button className="buto ml-2">Search</button></Link>
               </InputGroup>
-            </div>
+            </form>
           </Fragment>
           <Routing />
           <Footer className="footer" />

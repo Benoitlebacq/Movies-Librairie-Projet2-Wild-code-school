@@ -5,6 +5,10 @@
   height: 100vh;
   color : white;
 }
+.Rate-icon {
+  width : 30px;
+  height: 30px;
+}
 .img-card{
   height:30vh;
 }
@@ -138,12 +142,18 @@ section.route-section {
 
 .containing {
   display: flex;
-  overflow-x: hidden;
+  overflow-x: auto;
   overflow-y: hidden;
   height: 35vh;
   width: 100%;
   white-space: nowrap;
+
 }
+
+.containing::-webkit-scrollbar { 
+  height:  0 !important; 
+}
+
 
 .equipe {
   width: 15%;
