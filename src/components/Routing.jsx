@@ -8,6 +8,7 @@ import Gallery from "./Gallery"
 import SearchGallery from "./SearchGallery"
 import GalleryFavoris from "./GalleryFavoris";
 import PageFooter from "./PageFooter";
+import LegalMentions from "./LegalMentions";
 
 function Routing({ location }) {
   return (
@@ -19,7 +20,7 @@ function Routing({ location }) {
           classNames="fade"
         >
           <section className="route-section">
-            <Switch location={location}>
+            <Switch location={location} key={location}>
               <Route exact path="/" component={HomePage} />
               <Route path="/fiche/:ficheNumber(\d+)" component={Fiche} />
               <Route path="/casting/:castingNumber(\d+)" component={Casting} />
@@ -27,6 +28,7 @@ function Routing({ location }) {
               <Route path="/searchgallery/:search" component={SearchGallery} />
               <Route path="/GalleryFavorite/" component={GalleryFavoris} />
               <Route path="/PageFooter/" component={PageFooter} />
+              <Route path="/LegalMentions/" component={LegalMentions} />
             </Switch>
           </section>
         </CSSTransition>

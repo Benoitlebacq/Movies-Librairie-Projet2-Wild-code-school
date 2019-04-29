@@ -21,7 +21,7 @@ class CastMusic extends React.Component {
             this.state.crew.filter((member, i) => {
                 return member.job.includes('Music');
             }).map((casting) => {
-                return <li><span>{casting.job} :</span> {casting.name}</li>
+                return <p className="listingCast"><span>{casting.job} :</span> {casting.name}</p>
             }
             )
         )

@@ -41,7 +41,7 @@ class MoviePlayedIn extends React.Component {
           {
             isLoaded()
               ? <Link to={`/fiche/${this.props.idMovie}`}><img src={`https://image.tmdb.org/t/p/w500${this.state.movies.poster_path}`} alt="" className="img-card" /></Link>
-              : <img src={require("../loading.png")} className="img-card"></img>
+              : <img src={require("../loading.png")} className="img-card" alt=""></img>
           }
         </div>
       </div>

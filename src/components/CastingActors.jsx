@@ -26,6 +26,7 @@ class CastingActors extends React.Component {
                         name={casting.name}
                         img={"https://image.tmdb.org/t/p/w500" + casting.profile_path}
                         id={casting.id}
+                        key={casting.id}
                     />
                 </React.Fragment>
             }

@@ -32,7 +32,7 @@
   .img-down{
     text-align: center;
   }
-  .movie-poster, .favicon {
+  .movie-poster{
     float: left;
     width: 100%;
     /*margin: 4%;*/
@@ -78,7 +78,8 @@
   }
 
   .favicon {
-    width: 50px;
+    width: 10%;
+    height:10%;
     cursor: pointer;
   }
 
@@ -138,5 +139,11 @@
      border-left-color: green; 
   }
 
+  .faviconblock{
+    display:flex;
+  }
 
+  .addfav{
+    margin-top:3%;
+  }
   

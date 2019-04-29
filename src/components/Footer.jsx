@@ -8,6 +8,9 @@ class Footer extends React.Component {
       <Fragment>
           <NavLink activeClassName="active" className="littleInfo" exact to='/PageFooter'>
           Made by a WildCodeSchool Team !
+          </NavLink><br />
+          <NavLink activeClassName="active" className="littleInfo" exact to='/LegalMentions'>
+          Legal Mentions
           </NavLink>
       </Fragment>
     );

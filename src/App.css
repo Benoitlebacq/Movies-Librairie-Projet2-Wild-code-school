@@ -32,6 +32,9 @@ h1,h2,h3,h4, .categoriesName {
   margin-right: 10%;
   color: #45D932 ; 
 }
+.listingCast{
+  margin: 0px;
+}
 ul
  {
   list-style: none;
@@ -170,9 +173,101 @@ section.route-section {
   border-radius: 50px;
 }
 
+/* Navigation */
+.menu{
+  color: green;
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("./components/img/menu.png")!important; 
+}
+.navbar{
+  background-color: black;
+}
+.navbar-expand-md{
+  justify-content: space-around !important;
+}
+.link-nav{
+  text-align: left !important;
+  margin-left: 5%;
+}
+.navbar-collapse{
+  flex-grow: 0 !important;
+}
+@media only screen and (max-width: 800px) {
+
+ .leftList {
+    float: left;
+  }
+  .rightList {
+    float: right;
+  }
+
+}
+.link-nav li{
+  list-style: none;
+}
+.dropdown-toggle{
+  color: #999;
+  border: 1px solid green;
+}
+.textdeco {
+  border-radius: 3px 0 0 3px;
+  color: #999;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 20px 0 23px;
+  position: relative;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+  -webkit-transition: color 0.2s;
+  list-style: none;
+}
+.textdeco::before {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+  content: '';
+  height: 6px;
+  left: 10px;
+  position: absolute;
+  width: 6px;
+  top: 10px;
+}
+.textdeco::after {
+  background:black;
+  border-bottom: 13px solid transparent;
+  border-left: 10px solid black;
+  border-top: 13px solid transparent;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.textdeco:hover {
+  background-color: green;
+  color: white;
+  text-decoration: none
+}
+.textdeco:hover::after {
+   border-left-color: green; 
+}
+.recherche{
+  background-color: black;
+}
+
 .littleInfo {
   color: #45D932;
   font-size:14px;
   font-style: italic;
   text-align: center;
+}
+
+
+.team-project-2 a{
+  margin: 0.2vw;
+}
+.team-project-2{
+  height: 20%;
 }

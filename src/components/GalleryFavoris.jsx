@@ -15,7 +15,7 @@ class GalleryFavoris extends Component {
         let movies = [];
         response.data.map((fav) => {
           const movieId = fav.movie_id;
-          axios.get(`https://api.themoviedb.org/3/movie/${movieId}?api_key=a8a3380a564299f359c18e52aaa5bc79`)
+          return (axios.get(`https://api.themoviedb.org/3/movie/${movieId}?api_key=a8a3380a564299f359c18e52aaa5bc79`)
             .then(response => {
               const movie = {
                 id: response.data.id,
@@ -26,7 +26,7 @@ class GalleryFavoris extends Component {
               this.setState({
                 movies: movies
               });
-            })
+            }))
         });
       });
   };
@@ -35,6 +35,7 @@ class GalleryFavoris extends Component {
       <div>
         <div className="container-fluid">
           <div className="row" >
+          <h2 className="title-cat">My Favorites</h2>
             <div className="gallery-type">
               {this.state.movies.map((film, idx) => {
                 return (
