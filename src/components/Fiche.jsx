@@ -20,8 +20,8 @@ class Fiche extends React.Component {
       fiche: [],
       genres: [],
       videoId: "",
-      rateToSet : 0,
-      favoriteLogo : "",
+      rateToSet: 0,
+      favoriteLogo: "",
       favoriteLogoTitle: ""
     };
   }
@@ -53,21 +53,21 @@ class Fiche extends React.Component {
             console.log("Echec appel API Youtube: " + error);
           });
       });
-      axios.get(`http://localhost:5050/favorites?movie_id=${this.props.match.params.ficheNumber}&user=2`)
+    axios.get(`http://localhost:5050/favorites?movie_id=${this.props.match.params.ficheNumber}&user=2`)
       .then(res => {
         if (res.data.length === 0) {
           this.setState({
-            favoriteLogo : nonfavlogo,
-            favoriteLogoTitle : "Add to Favorites"
+            favoriteLogo: nonfavlogo,
+            favoriteLogoTitle: "Add to Favorites"
           })
-        }else{
+        } else {
           this.setState({
-            favoriteLogo : favlogo,
-            favoriteLogoTitle : "Remove from Favorites"
+            favoriteLogo: favlogo,
+            favoriteLogoTitle: "Remove from Favorites"
           });
         };
       });
-        
+
   }
   addFav = () => {
     axios.get(`http://localhost:5050/favorites?movie_id=${this.props.match.params.ficheNumber}&user=2`)
@@ -82,8 +82,8 @@ class Fiche extends React.Component {
             });
           swal("Added", "You added this movie to favorite !", "success");
           this.setState({
-            favoriteLogo : favlogo,
-            favoriteLogoTitle : "Remove from Favorites"
+            favoriteLogo: favlogo,
+            favoriteLogoTitle: "Remove from Favorites"
           });
         }
         else {
@@ -96,25 +96,25 @@ class Fiche extends React.Component {
             });
           swal("Removed", "This movie rate has been removed", "error");
           this.setState({
-            favoriteLogo : nonfavlogo,
-            favoriteLogoTitle : "Add to Favorites"
+            favoriteLogo: nonfavlogo,
+            favoriteLogoTitle: "Add to Favorites"
           });
         };
       });
   };
-  setDefaultRate(){
+  setDefaultRate() {
     axios.get(`http://localhost:5050/rating?movie_id=${this.props.match.params.ficheNumber}&user=2`)
-            .then(res =>{
-              if (res.data.length!==0){
-                this.setState({rateToSet : res.data[0].rate})
-              }
-              
-            })
+      .then(res => {
+        if (res.data.length !== 0) {
+          this.setState({ rateToSet: res.data[0].rate })
+        }
+
+      })
   };
 
   addRate = (value) => {
     axios.get(`http://localhost:5050/rating?movie_id=${this.props.match.params.ficheNumber}&user=2`)
-      .then(res => {        
+      .then(res => {
         if (res.data.length === 0) {
           let rating = {
             user_id: "2",
@@ -131,13 +131,13 @@ class Fiche extends React.Component {
             .then(res => {
               let idToDelete = res.data[0].id
               axios.delete(`http://localhost:5050/rating/${idToDelete}`)
-                .then(res => {                  
+                .then(res => {
                 });
             });
           let rating = {
             user_id: "2",
             movie_id: this.props.match.params.ficheNumber,
-            rate : value
+            rate: value
           };
           axios.post('http://localhost:5050/rating', { ...rating })
             .then(res => {
@@ -155,27 +155,30 @@ class Fiche extends React.Component {
           <div className="movie-pic row">
             <div className="movie-fav col-lg-4 col-md-12">
               <img className="movie-poster" src={"https://image.tmdb.org/t/p/w500" + this.state.fiche.poster_path} alt={this.state.fiche.original_title} />
-              <img src={this.state.favoriteLogo} className="favicon" onClick={this.addFav} alt="fav" title={this.state.favoriteLogoTitle} />
+
             </div>
             <div className="youtube col-lg-6 col-md-12"><Youtube className="heigh-youtube" videoId={this.state.videoId} />
               <p className="movie-date">Release date : {this.state.fiche.release_date}</p>
+              <div className="movie-synopsis mb-5">
+                <h2 className="synopsis-title">Synopsis</h2>
+                <p className="synopsis-title">{this.state.fiche.overview}</p>
+                <div className="Rating">
+                  Rate this movie : <Rating stop={10} onClick={(value) => this.addRate(value)}
+                    placeholderRating={this.state.rateToSet}
+                    placeholderSymbol={<img src="https://cdn3.iconfinder.com/data/icons/shapes-have-feelings-too-v2/640/star-face-emoji-shapes-happy-emoticons-smiley-2-512.png" className="Rate-icon" />}
+                    emptySymbol={<img src="https://cdn3.iconfinder.com/data/icons/pretty-office-part-3/256/Star_empty-512.png" className="Rate-icon" />}
+                    fullSymbol={<img src="https://cdn3.iconfinder.com/data/icons/shapes-have-feelings-too-v2/640/star-face-emoji-shapes-happy-emoticons-smiley-2-512.png" className="Rate-icon" />}
+                    onClick={this.addRate}
+                  />
+                </div>
+                <br />
+                Add to favorites :
+                <br />
+                <img src={this.state.favoriteLogo} className="favicon" onClick={this.addFav} alt="fav" title={this.state.favoriteLogoTitle} />
+              </div>
             </div>
-          </div>
-          <div className="Rating">
-            Rate this movie : <Rating stop={10} onClick={(value) => this.addRate(value)}
-              placeholderRating={this.state.rateToSet}
-              placeholderSymbol={<img src="https://cdn3.iconfinder.com/data/icons/shapes-have-feelings-too-v2/640/star-face-emoji-shapes-happy-emoticons-smiley-2-512.png" className="Rate-icon" />}
-              emptySymbol={<img src="https://cdn3.iconfinder.com/data/icons/pretty-office-part-3/256/Star_empty-512.png" className="Rate-icon" />}
-              fullSymbol={<img src="https://cdn3.iconfinder.com/data/icons/shapes-have-feelings-too-v2/640/star-face-emoji-shapes-happy-emoticons-smiley-2-512.png" className="Rate-icon" />}
-              onClick={this.addRate}
-            />
           </div>
           <div className="movie-infos container ">
-            <div className="movie-synopsis mb-5">
-              <h2>Synopsis</h2>
-
-              <p>{this.state.fiche.overview}</p>
-            </div>
             <div className="movie-genre">
               <ul>
                 <h4>Genres </h4>{this.state.genres === undefined ? ' ' : this.state.genres.map((genre) => {

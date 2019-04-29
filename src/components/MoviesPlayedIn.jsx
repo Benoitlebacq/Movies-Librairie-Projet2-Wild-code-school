@@ -6,21 +6,21 @@ class MoviePlayedIn extends React.Component {
     super(props);
     this.state = {
       movies: [] ,
-      compteur : 1
+      count : 1
     };
   }
   componentDidMount() {
     this.getMovie();
   }  
   getMovie() { 
-    if (this.state.compteur % 2 === 0) {
+    if (this.state.count % 2 === 0) {
       axios.get(`https://api.themoviedb.org/3/movie/${this.props.idMovie}?api_key=ff37a1a34cd2beecb41b30cbfda1916b`)
         .then(response => {
           this.setState({
             movies: response.data
           });
         });
-        this.setState({compteur : this.state.compteur+1})      
+        this.setState({count : this.state.count+1})      
     }
     else {
       axios.get(`https://api.themoviedb.org/3/movie/${this.props.idMovie}?api_key=1092ee57947c8bdfc25a5a0641ecb8ec`)
@@ -30,7 +30,7 @@ class MoviePlayedIn extends React.Component {
           });
           
         });
-      this.setState({compteur : this.state.compteur+1})      
+      this.setState({count : this.state.count+1})      
     }
   }
   render() {

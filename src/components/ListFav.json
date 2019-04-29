@@ -29,6 +29,11 @@
       "user_id": "2",
       "movie_id": "299537",
       "id": 10
+    },
+    {
+      "user_id": "2",
+      "movie_id": "280217",
+      "id": 11
     }
   ],
   "rating": [
@@ -97,6 +102,24 @@
       "movie_id": "172",
       "rate": 4,
       "id": 19
+    },
+    {
+      "user_id": "2",
+      "movie_id": "166428",
+      "rate": 6,
+      "id": 20
+    },
+    {
+      "user_id": "2",
+      "movie_id": "280217",
+      "rate": 8,
+      "id": 21
+    },
+    {
+      "user_id": "2",
+      "movie_id": "404368",
+      "rate": 8,
+      "id": 22
     }
   ]
 }

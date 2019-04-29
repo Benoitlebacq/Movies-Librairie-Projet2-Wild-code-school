@@ -5,6 +5,8 @@ import marylin from './img/marylin.jpeg';
 import benoit from './img/benoit.jpeg';
 import johan from './img/johan.jpeg';
 import antoine from './img/antoine.jpg';
+import vignetteFooter from './img/vignetteFooter.png';
+import WildCodeSchool from './img/wcs.png';
 
 class PageFooter extends Component {
     render() {
@@ -14,7 +16,8 @@ class PageFooter extends Component {
                     <h1 className="titre-equipe">Team II</h1>
                     <div className="movie-pic row">
                         <div className="movie-fav col-lg-4 col-md-12">
-                            <img className="movie-poster" src="" alt="POSTER" />
+
+                            <img className="movie-poster" src={vignetteFooter} alt="POSTER" />
                         </div>
                         <div className="youtube col-lg-6 col-md-12">
                             <iframe width="560" height="315" src="https://www.youtube.com/embed/mQJI3rpre10" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -37,8 +40,12 @@ class PageFooter extends Component {
                                 <img className="equipe" src={marylin} alt="img" />
                             </div>
                         </div>
+                        <div className="img-down">
+                            <a href="https://wildcodeschool.fr/" target="_blank"><img src={WildCodeSchool} alt="WildCodeSchool" /></a>
+                        </div>
                     </div>
                 </div>
+                <p className="littleInfo">This product uses the TMDb API but is not endorsed or certified by TMDb."</p>
             </div>
         )
     }

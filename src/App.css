@@ -153,10 +153,26 @@ section.route-section {
 .containing::-webkit-scrollbar { 
   height:  0 !important; 
 }
+.containing::-moz-scrollbar { 
+  height:  0 !important; 
+}
+.containing::-o-scrollbar { 
+  height:  0 !important; 
+}
+.containing::-ms-scrollbar { 
+  height:  0 !important; 
+}
 
 
 .equipe {
   width: 15%;
   height : 15%;
   border-radius: 50px;
+}
+
+.littleInfo {
+  color: #45D932;
+  font-size:14px;
+  font-style: italic;
+  text-align: center;
 }
